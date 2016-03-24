@@ -1,1 +1,2 @@
-# veebirak-ex2
+# IDU0200 Web applications exercise
+Object: Star
