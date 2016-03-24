@@ -1,0 +1,23 @@
+
+/* https://github.com/Dogfalo/materialize/issues/1690 */
+label[data-error]:after {
+    white-space: nowrap;
+}
+
+/* fix input placeholder left position, angular-materialize causes left: 0.75rem */
+.input-field label {
+    left: 0;
+}
+
+/* Rules for using icons as black on a light background. */
+.material-icons.md-dark { color: rgba(0, 0, 0, 0.54); }
+.material-icons.md-dark.md-inactive { color: rgba(0, 0, 0, 0.26); }
+
+/* Rules for using icons as white on a dark background. */
+.material-icons.md-light { color: rgba(255, 255, 255, 1); }
+.material-icons.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }
+
+/* fix icon vertical position when next to input field */
+.input-field .prefix {
+    margin-top: 12px
+}

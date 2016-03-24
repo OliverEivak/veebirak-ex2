@@ -1,0 +1,6 @@
+12:53:57.076 [http-nio-8080-exec-1] INFO  ee.ttu.olivereivak.veebirakex2.controller.StarServlet - StarServlet starting
+12:54:17.184 [http-nio-8080-exec-6] DEBUG ee.ttu.olivereivak.veebirakex2.db.StarDAO - Update modified 1 rows
+12:54:30.051 [http-nio-8080-exec-9] ERROR ee.ttu.olivereivak.veebirakex2.validator.StarValidator - Validation error on field commonName: Common name can be up to 32 characters long
+12:54:30.051 [http-nio-8080-exec-9] ERROR ee.ttu.olivereivak.veebirakex2.validator.StarValidator - Validation error on field distanceInLightYears: Distance in light years is not valid
+12:54:36.892 [http-nio-8080-exec-1] INFO  ee.ttu.olivereivak.veebirakex2.controller.StarService - StarService starting
+12:55:07.898 [http-nio-8080-exec-5] DEBUG ee.ttu.olivereivak.veebirakex2.controller.StarServlet - Star not found
