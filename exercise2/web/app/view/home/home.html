@@ -1,0 +1,59 @@
+<div class="container">
+    <div class="row">
+        <div class="col s12">
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col s12 m12 l8 offset-l2">
+            <h5>List of stars</h5>
+            <table>
+                <thead>
+                <tr>
+                    <th data-field="id">ID</th>
+                    <th data-field="commonName">Common Name</th>
+                    <th data-field="distanceInLightYears">Distance in light years</th>
+                    <th data-field="description">Description</th>
+                    <th data-field="description">Actions</th>
+                </tr>
+                </thead>
+
+                <tbody>
+                    <tr data-ng-repeat="star in stars">
+                        <td>{{star.id}}</td>
+                        <td>{{star.commonName}}</td>
+                        <td>{{star.distanceInLightYears}}</td>
+                        <td><a href="#" data-ng-click="openDescription(star.id)">Description</a></td>
+                        <td><a data-ng-href="stars/{{star.id}}">Edit</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="row" id="description-box" data-ng-show="star">
+        <div class="col s12 m12 l8 offset-l2 card">
+            <div class="card-content">
+                <span class="card-title">Description</span>
+                <form>
+                    <div class="row">
+                        <div class="input-field col s12 m12 l12">
+                            <input id="star-id" type="number" name="id" readonly data-ng-model="star.id"/>
+                            <label for="star-id">ID</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12 m12 l12">
+                        <textarea id="star-description" class="materialize-textarea" name="description" readonly data-ng-model="star.description">
+                        </textarea>
+                            <label for="star-description">Description</label>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="card-action">
+                <a href="" id="close-description" data-ng-click="star = null">Close</a>
+            </div>
+        </div>
+    </div>
+</div>

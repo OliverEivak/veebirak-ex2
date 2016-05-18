@@ -10,10 +10,10 @@
 shutdownPort: 10777
 
 web:
-  port: 8081
+  port: 8083
   initParameters:
     "resteasy.role.based.security": true
-    "resteasy.providers": "ee.ttu.olivereivak.veebirakex2.resource.filter.AuthenticationFilter,ee.ttu.olivereivak.veebirakex2.resource.exception.ApplicationExceptionMapper"
+    "resteasy.providers": "ee.ttu.olivereivak.veebirakex2.resource.exception.ApplicationExceptionMapper"
 
 database:
   driverClass: com.mysql.jdbc.Driver
@@ -43,10 +43,10 @@ logging:
       </appender>
 
       <appender name="file" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <file>app.log</file>
+        <file>web/app/star.log</file>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
           <!-- daily rollover -->
-          <fileNamePattern>logs/app.%d{yyyy-MM-dd}.log</fileNamePattern>
+          <fileNamePattern>logs/star.%d{yyyy-MM-dd}.log</fileNamePattern>
 
           <!-- keep 30 days' worth of history -->
           <maxHistory>30</maxHistory>

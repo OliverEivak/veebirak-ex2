@@ -1,6 +1,5 @@
 package ee.ttu.olivereivak.veebirakex2.config;
 
-import org.gwizard.healthchecks.HealthChecksConfig;
 import org.gwizard.hibernate.DatabaseConfig;
 import org.gwizard.logging.LoggingConfig;
 
@@ -22,5 +21,4 @@ public class ApplicationConfig {
 	private LoggingConfig logging = new LoggingConfig();
 	private ApplicationWebConfig web = new ApplicationWebConfig();
 	private DatabaseConfig database = new DatabaseConfig();
-	private HealthChecksConfig healthChecks = new HealthChecksConfig();
 }

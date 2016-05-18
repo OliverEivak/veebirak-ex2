@@ -1,8 +1,3 @@
--- Users
-INSERT INTO User (id, username, role, `password`) VALUES (1, 'john', 'USER', X'243261243130246a6b4b722e7364356e705565706557544d304f367a4f434a4e716575474f3565674b564c5476436830567a685531464c6e526b6a4f');
-INSERT INTO User (id, username, role, `password`) VALUES (2, 'jane', 'USER', X'243261243130243244334e4c35614772726a336e3052304a687a755365536a73346e51394365306a496e675a4569756b664b466442736c536568324f');
--- user=john pw=test user=jane pw=best
-
--- Authentication
-INSERT INTO Authentication (id, token, `user`) VALUES (1, 'asd', 1);
-INSERT INTO Authentication (id, token, `user`) VALUES (2, 'qwe', 2);
+INSERT INTO Star (commonName, distanceInLightYears, description) VALUES ('Sirius', 8.6, 'Sirius is the brightest star in the sky, after the Sun');
+INSERT INTO Star (commonName, distanceInLightYears, description) VALUES ('Canopus', 74, 'Canopus is the 2nd brightest star in the sky.');
+INSERT INTO Star (commonName, distanceInLightYears, description) VALUES ('Antares', 520, 'Antares is the 15th brightest star in the sky. Antares gets its name from the ancient Greeks. It means Anti-Ares. Ares is, of course, the Greek god of War who is also called Mars by the Romans. Antares is linked to the planet Mars because they are both about the same color and the same brightness, so it is easy to get them confused.');

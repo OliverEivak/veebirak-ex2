@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+<html lang="en" ng-app="app" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html lang="en" ng-app="app" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html lang="en" ng-app="app" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en" ng-app="app" class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Stars</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- build:css(.) /styles/vendor.css -->
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!-- build:css(.tmp) /styles/main.css -->
+    <link rel="stylesheet" href="/styles/main.css">
+    <!-- endbuild -->
+    <base href="/">
+</head>
+<body>
+
+<!--[if lt IE 7]>
+<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please
+    <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+<div data-header></div>
+
+<div data-ng-view></div>
+
+<!-- In production use:
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
+-->
+
+<!-- build:js scripts/vendor.js -->
+<!-- bower:js -->
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-route/angular-route.js"></script>
+<script src="bower_components/angular-loader/angular-loader.js"></script>
+<script src="bower_components/angular-mocks/angular-mocks.js"></script>
+<script src="bower_components/angular-messages/angular-messages.js"></script>
+<script src="bower_components/angular-animate/angular-animate.js"></script>
+<script src="bower_components/materialize/bin/materialize.js"></script>
+<script src="bower_components/angular-materialize/src/angular-materialize.js"></script>
+<!-- endbower -->
+<!-- endbuild -->
+
+<!-- build:js({.tmp,app}) scripts/scripts.js -->
+<script src="app.js"></script>
+<script src="services/services.js"></script>
+<script src="services/httpService.js"></script>
+<script src="services/starService.js"></script>
+<script src="components/version/version.js"></script>
+<script src="components/version/version-directive.js"></script>
+<script src="components/version/interpolate-filter.js"></script>
+<script src="components/header/header.js"></script>
+<script src="view/home/home.js"></script>
+<script src="view/star/star.js"></script>
+<script src="view/logs/logs.js"></script>
+<!-- endbuild -->
+
+<div class="hiddendiv" style="display: none;"></div>
+
+</body>
+</html>

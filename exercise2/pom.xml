@@ -20,7 +20,7 @@
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
-			<version>1.16.4</version>
+			<version>1.16.8</version>
 			<scope>provided</scope>
 		</dependency>
 
@@ -88,16 +88,6 @@
 			<groupId>org.gwizard</groupId>
 			<artifactId>gwizard-hibernate</artifactId>
 			<version>0.7-SNAPSHOT</version>
-		</dependency>
-		<dependency>
-			<groupId>org.gwizard</groupId>
-			<artifactId>gwizard-metrics</artifactId>
-			<version>${gwizard.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.gwizard</groupId>
-			<artifactId>gwizard-healthchecks</artifactId>
-			<version>${gwizard.version}</version>
 		</dependency>
 
 		<!-- MySQL -->

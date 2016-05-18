@@ -8,14 +8,10 @@ import org.jboss.resteasy.plugins.providers.jackson.ResteasyJackson2Provider;
 import org.junit.After;
 import org.junit.Before;
 
-import ee.ttu.olivereivak.veebirakex2.entity.Authentication;
-import ee.ttu.olivereivak.veebirakex2.guice.module.RestModule;
-import ee.ttu.olivereivak.veebirakex2.resource.ILoginResource;
-import ee.ttu.olivereivak.veebirakex2.resource.ILogoutResource;
-import ee.ttu.olivereivak.veebirakex2.resource.filter.AuthHeadersRequestFilter;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.inject.Module;
 
+import ee.ttu.olivereivak.veebirakex2.guice.module.RestModule;
 import lombok.extern.slf4j.Slf4j;
 
 /**
@@ -56,33 +52,6 @@ public class FullWebStackTestBase<T> extends TestBase {
 
         ResteasyWebTarget target = client.target(String.format("http://localhost:%s/", TEST_PORT));
         return target.proxy(resourceInterface);
-    }
-
-    protected T getClientWithAuthentication(Class<T> resourceInterface, String token, String username) {
-        ResteasyClient client = getClientWithObjectMapper();
-        client.register(new AuthHeadersRequestFilter(token, username));
-
-        ResteasyWebTarget target = client.target(String.format("http://localhost:%s/", TEST_PORT));
-        return target.proxy(resourceInterface);
-    }
-
-    protected Authentication login(String username, String password) {
-        ResteasyClient client = new ResteasyClientBuilder().build();
-        ResteasyWebTarget target = client.target(String.format("http://localhost:%s/", TEST_PORT));
-        ILoginResource loginClient = target.proxy(ILoginResource.class);
-
-        ILoginResource.LoginForm loginForm = new ILoginResource.LoginForm(username, password);
-        return loginClient.login(loginForm);
-    }
-
-    protected void logout(Authentication authentication) {
-        ResteasyClient client = new ResteasyClientBuilder().build();
-        client.register(new AuthHeadersRequestFilter(authentication.getToken(), authentication.getUser().getUsername()));
-
-        ResteasyWebTarget target = client.target(String.format("http://localhost:%s/", TEST_PORT));
-        ILogoutResource logoutClient = target.proxy(ILogoutResource.class);
-
-        logoutClient.logout();
     }
 
 }
