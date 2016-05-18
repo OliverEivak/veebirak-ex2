@@ -26,6 +26,7 @@ public class StarResource extends BaseResource implements IStarResource {
     }
 
     @GET
+    @Transactional
     public List<Star> getAll() {
         return starService.getAll();
     }
