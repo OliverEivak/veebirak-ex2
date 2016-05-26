@@ -4,7 +4,7 @@
         <Console name="Console" target="SYSTEM_OUT">
             <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
         </Console>
-        <File name="FileA1" fileName="/home/oliver/git/veebirak-ex2/out/artifacts/veebirak_ex2_war_exploded/star.log" append="false">
+        <File name="FileA1" fileName="/home/oliver/git/web-based-apps/exercise1/out/artifacts/veebirak_ex2_war_exploded/star.log" append="false">
             <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
         </File>
     </Appenders>
