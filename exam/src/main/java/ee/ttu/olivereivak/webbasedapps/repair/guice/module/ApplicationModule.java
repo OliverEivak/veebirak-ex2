@@ -9,12 +9,13 @@ import com.google.common.util.concurrent.Service;
 import com.google.inject.AbstractModule;
 import com.google.inject.Provides;
 
+import lombok.extern.slf4j.Slf4j;
+
 import ee.ttu.olivereivak.webbasedapps.repair.config.ApplicationConfig;
 import ee.ttu.olivereivak.webbasedapps.repair.guice.provider.ObjectMapperProvider;
 import ee.ttu.olivereivak.webbasedapps.repair.resource.BaseResource;
 import ee.ttu.olivereivak.webbasedapps.repair.util.ReflectionUtils;
 import ee.ttu.olivereivak.webbasedapps.repair.web.ApplicationWebServer;
-import lombok.extern.slf4j.Slf4j;
 
 /**
  * <p>Among the duties of your application module(s), you must explicitly bind every JAXRS resource class.

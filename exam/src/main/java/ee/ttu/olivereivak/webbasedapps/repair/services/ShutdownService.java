@@ -11,10 +11,11 @@ import org.gwizard.services.Services;
 
 import com.google.common.util.concurrent.AbstractExecutionThreadService;
 
+import lombok.extern.slf4j.Slf4j;
+
 import ee.ttu.olivereivak.webbasedapps.repair.Main;
 import ee.ttu.olivereivak.webbasedapps.repair.config.ApplicationConfig;
 import ee.ttu.olivereivak.webbasedapps.repair.util.SocketUtils;
-import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class ShutdownService extends AbstractExecutionThreadService {

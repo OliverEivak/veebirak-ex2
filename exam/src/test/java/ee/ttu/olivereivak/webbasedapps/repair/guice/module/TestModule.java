@@ -13,9 +13,10 @@ import com.google.inject.AbstractModule;
 import com.google.inject.Provides;
 
 import ch.qos.logback.classic.Level;
+import lombok.extern.slf4j.Slf4j;
+
 import ee.ttu.olivereivak.webbasedapps.repair.config.ApplicationConfig;
 import ee.ttu.olivereivak.webbasedapps.repair.test.IntegrationTestBase;
-import lombok.extern.slf4j.Slf4j;
 
 /**
  */

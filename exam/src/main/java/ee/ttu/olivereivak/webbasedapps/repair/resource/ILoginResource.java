@@ -6,11 +6,12 @@ import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
-import ee.ttu.olivereivak.webbasedapps.repair.entity.Authentication;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+
+import ee.ttu.olivereivak.webbasedapps.repair.entity.Authentication;
 
 @Path("/login")
 @Produces(MediaType.APPLICATION_JSON)

@@ -13,9 +13,10 @@ import javax.ws.rs.core.MultivaluedMap;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.ext.Provider;
 
+import lombok.extern.slf4j.Slf4j;
+
 import ee.ttu.olivereivak.webbasedapps.repair.dao.AuthenticationDAO;
 import ee.ttu.olivereivak.webbasedapps.repair.entity.Authentication;
-import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 @Provider

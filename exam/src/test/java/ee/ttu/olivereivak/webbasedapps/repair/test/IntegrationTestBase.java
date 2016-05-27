@@ -15,12 +15,13 @@ import com.fasterxml.classmate.TypeResolver;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.inject.Module;
 
+import lombok.extern.slf4j.Slf4j;
+
 import ee.ttu.olivereivak.webbasedapps.repair.entity.Authentication;
 import ee.ttu.olivereivak.webbasedapps.repair.guice.module.RestModule;
 import ee.ttu.olivereivak.webbasedapps.repair.resource.ILoginResource;
 import ee.ttu.olivereivak.webbasedapps.repair.resource.ILogoutResource;
 import ee.ttu.olivereivak.webbasedapps.repair.resource.filter.AuthHeadersRequestFilter;
-import lombok.extern.slf4j.Slf4j;
 
 /**
  * <p>This starts the full web stack and allows to issue real http requests against the target. </p>

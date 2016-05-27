@@ -8,11 +8,12 @@ import javax.inject.Singleton;
 
 import org.mindrot.jbcrypt.BCrypt;
 
+import lombok.extern.slf4j.Slf4j;
+
 import ee.ttu.olivereivak.webbasedapps.repair.dao.AuthenticationDAO;
 import ee.ttu.olivereivak.webbasedapps.repair.dao.UserAccountDAO;
 import ee.ttu.olivereivak.webbasedapps.repair.entity.Authentication;
 import ee.ttu.olivereivak.webbasedapps.repair.entity.UserAccount;
-import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 @Singleton

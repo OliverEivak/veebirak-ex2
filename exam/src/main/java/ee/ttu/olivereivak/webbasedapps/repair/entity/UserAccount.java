@@ -16,11 +16,12 @@ import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import ee.ttu.olivereivak.webbasedapps.repair.entity.converter.SubjectTypeConverter;
 import ee.ttu.olivereivak.webbasedapps.repair.entity.subject.Employee;
 import ee.ttu.olivereivak.webbasedapps.repair.entity.subject.SubjectType;
-import lombok.Getter;
-import lombok.Setter;
 
 @Entity
 @Getter

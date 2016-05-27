@@ -9,11 +9,12 @@ import com.google.inject.Injector;
 import com.google.inject.Module;
 import com.google.inject.util.Modules;
 
+import lombok.extern.slf4j.Slf4j;
+
 import ee.ttu.olivereivak.webbasedapps.repair.guice.GuiceInjector;
 import ee.ttu.olivereivak.webbasedapps.repair.guice.module.ApplicationModule;
 import ee.ttu.olivereivak.webbasedapps.repair.guice.module.EmptyModule;
 import ee.ttu.olivereivak.webbasedapps.repair.guice.module.TestModule;
-import lombok.extern.slf4j.Slf4j;
 
 /**
  * Some common behavior for all tests. Sets up an injector suitable for executing JAXRS resources
