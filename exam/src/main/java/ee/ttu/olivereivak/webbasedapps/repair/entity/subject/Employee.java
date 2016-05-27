@@ -1,4 +1,4 @@
-package ee.ttu.olivereivak.webbasedapps.repair.entity;
+package ee.ttu.olivereivak.webbasedapps.repair.entity.subject;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

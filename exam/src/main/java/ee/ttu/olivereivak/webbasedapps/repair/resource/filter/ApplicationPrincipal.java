@@ -3,7 +3,7 @@ package ee.ttu.olivereivak.webbasedapps.repair.resource.filter;
 import java.security.Principal;
 
 import ee.ttu.olivereivak.webbasedapps.repair.entity.Authentication;
-import ee.ttu.olivereivak.webbasedapps.repair.entity.SubjectType;
+import ee.ttu.olivereivak.webbasedapps.repair.entity.subject.SubjectType;
 
 public class ApplicationPrincipal implements Principal {
 

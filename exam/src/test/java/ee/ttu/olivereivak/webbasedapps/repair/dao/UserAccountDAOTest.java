@@ -4,7 +4,7 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
-import ee.ttu.olivereivak.webbasedapps.repair.entity.SubjectType;
+import ee.ttu.olivereivak.webbasedapps.repair.entity.subject.SubjectType;
 import ee.ttu.olivereivak.webbasedapps.repair.entity.UserAccount;
 import ee.ttu.olivereivak.webbasedapps.repair.test.DAOTestBase;
 

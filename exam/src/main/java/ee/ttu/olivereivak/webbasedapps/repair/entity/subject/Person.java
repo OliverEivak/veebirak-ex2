@@ -1,6 +1,7 @@
-package ee.ttu.olivereivak.webbasedapps.repair.entity;
+package ee.ttu.olivereivak.webbasedapps.repair.entity.subject;
 
 import java.time.Instant;
+import java.time.LocalDate;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -17,20 +18,26 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-@Table(name = "enterprise")
-@SequenceGenerator(name = "enterprise_seq", sequenceName = "enterprise_id", allocationSize = 1)
-public class Enterprise implements Subject {
+@Table(name = "person")
+@SequenceGenerator(name = "person_seq", sequenceName = "person_id", allocationSize = 1)
+public class Person implements Subject {
 
     @Id
-    @GeneratedValue(generator = "enterprise_seq")
-    @Column(name = "enterprise")
+    @GeneratedValue(generator = "person_seq")
+    @Column(name = "person")
     private Long id;
 
-    @Column(columnDefinition = "text")
-    private String name;
+    @Column(name = "first_name", length = 100)
+    private String firstName;
 
-    @Column(name = "full_name", columnDefinition = "text")
-    private String fullName;
+    @Column(name = "last_name", length = 100)
+    private String lastName;
+
+    @Column(name = "identity_code", length = 20)
+    private String ssn;
+
+    @Column(name = "birth_date")
+    private LocalDate birthDate;
 
     @ManyToOne
     @JoinColumn(name = "created_by")

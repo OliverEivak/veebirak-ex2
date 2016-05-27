@@ -3,7 +3,7 @@ package ee.ttu.olivereivak.webbasedapps.repair.entity.converter;
 import javax.persistence.AttributeConverter;
 import javax.persistence.Converter;
 
-import ee.ttu.olivereivak.webbasedapps.repair.entity.SubjectType;
+import ee.ttu.olivereivak.webbasedapps.repair.entity.subject.SubjectType;
 
 @Converter
 public class SubjectTypeConverter implements AttributeConverter<SubjectType, Long> {
