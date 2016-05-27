@@ -1,0 +1,118 @@
+
+/* https://github.com/Dogfalo/materialize/issues/1690 */
+label[data-error]:after {
+  white-space: nowrap;
+}
+
+/* fix input placeholder left position, angular-materialize causes left: 0.75rem */
+.input-field label {
+  left: 0;
+}
+
+/* fix icon vertical position when next to input field */
+.input-field .prefix {
+  margin-top: 12px
+}
+
+/* MaterializeCSS design for Angular form validation */
+$input-success-color: color("green", "base") !default;
+$input-error-color: color("red", "base") !default;
+$label-font-size: .8rem !default;
+
+input:not([type]),
+input[type=text],
+input[type=password],
+input[type=email],
+input[type=url],
+input[type=time],
+input[type=date],
+input[type=datetime-local],
+input[type=tel],
+input[type=number],
+input[type=search],
+textarea.materialize-textarea {
+
+  // Valid Input Style
+  &.ng-dirty.ng-valid,
+  &:focus.ng-dirty.ng-valid {
+    border-bottom: 1px solid $input-success-color;
+    box-shadow: 0 1px 0 0 $input-success-color;
+  }
+
+  // Invalid Input Style
+  &.ng-dirty.ng-invalid,
+  &:focus.ng-dirty.ng-invalid {
+    border-bottom: 1px solid $input-error-color;
+    box-shadow: 0 1px 0 0 $input-error-color;
+  }
+
+}
+
+form.ng-submitted {
+
+  input:not([type]),
+  input[type=text],
+  input[type=password],
+  input[type=email],
+  input[type=url],
+  input[type=time],
+  input[type=date],
+  input[type=datetime-local],
+  input[type=tel],
+  input[type=number],
+  input[type=search],
+  textarea.materialize-textarea {
+
+    // Valid Input Style
+    &.ng-valid,
+    &:focus.ng-valid {
+      border-bottom: 1px solid $input-success-color;
+      box-shadow: 0 1px 0 0 $input-success-color;
+    }
+
+    // Invalid Input Style
+    &.ng-invalid,
+    &:focus.ng-invalid {
+      border-bottom: 1px solid $input-error-color;
+      box-shadow: 0 1px 0 0 $input-error-color;
+    }
+
+  }
+
+}
+
+div[data-ng-messages] {
+  color: $input-error-color;
+  font-size: $label-font-size;
+  margin-top: -9px;
+}
+
+div[data-ng-messages].with-icon {
+  margin-left: 45px;
+}
+
+/* Stop the form elements from jumping around */
+div[data-ng-messages].ng-inactive {
+  margin-bottom: 18px;
+}
+
+
+/* Input and button on the same row */
+.input-and-button {
+  position: relative;
+
+  .input-wrapper {
+    overflow: hidden;
+    padding-right: 10px;
+  }
+
+  button {
+    float: right;
+    height: 3rem;
+    line-height: 3rem;
+  }
+}
+
+.full-width {
+  width: 100%;
+}

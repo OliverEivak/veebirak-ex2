@@ -1,0 +1,29 @@
+/* Rules for using icons as black on a light background. */
+.material-icons.md-dark { color: rgba(0, 0, 0, 0.54); }
+.material-icons.md-dark.md-inactive { color: rgba(0, 0, 0, 0.26); }
+
+.material-icons.md-very-dark { color: rgba(0, 0, 0, 0.72); }
+.material-icons.md-very-dark.md-inactive { color: rgba(0, 0, 0, 0.72); }
+
+.material-icons.md-text { color: rgb(48, 80, 103); }
+.material-icons.md-text.md-inactive { color: rgb(48, 80, 103); }
+
+/* Rules for using icons as white on a dark background. */
+.material-icons.md-light { color: rgba(255, 255, 255, 1); }
+.material-icons.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }
+
+/* Blue icons */
+.material-icons.md-blue { color: rgba(33, 150, 243, 1); }
+.material-icons.md-blue.md-inactive { color: rgba(33, 150, 243, 0.3); }
+
+/* Orange icons */
+.material-icons.md-orange { color: rgba(255, 152, 0, 1); }
+.material-icons.md-orange.md-inactive { color: rgba(255, 152, 0, 0.3); }
+
+/* Red icons */
+.material-icons.md-red { color: #d32f2f; }
+
+/* Highlight */
+.material-icons.highlight:hover {
+  background-color: rgba(223, 228, 235, 0.65);
+}

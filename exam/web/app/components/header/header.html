@@ -1,0 +1,29 @@
+<!-- Navigation -->
+<nav role="navigation">
+    <div class="nav-wrapper container">
+        <a id="logo-container" href="/" class="brand-logo">Repairshop</a>
+
+        <ul class="right">
+            <li data-ng-class="{active: isHomePage()}"><a href="/">Home</a></li>
+
+            <li data-ng-class="{active: isPage('/something')}" data-ng-if="isAuthenticated()"><a href="/something">Something</a></li>
+
+            <li data-ng-show="isAuthenticated()">
+                <a href="" data-activates='userDropdown' dropdown data-beloworigin="true" data-hover="true">{{getUser().username}}!</a>
+            </li>
+        </ul>
+
+        <!-- Dropdown -->
+        <ul id='userDropdown' class='dropdown-content'>
+            <li><a href="/somethingelse" class="with-icon"><i class="material-icons md-text">settings</i>Something else</a></li>
+            <li><a href="javascript:void(0);" class="with-icon" data-ng-click="logout()"><i class="material-icons md-text">power_settings_new</i>Log out</a></li>
+        </ul>
+
+    </div>
+</nav>
+
+<br>
+
+<div class="container" data-ng-show="isActive && isAuthenticated()">
+    <div data-pl-current-song data-active="isActive"></div>
+</div>

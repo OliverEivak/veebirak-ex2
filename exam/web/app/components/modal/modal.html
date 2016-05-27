@@ -1,0 +1,14 @@
+<a class='btn' data-ng-href='#modal' data-modal data-open="modalService.open" style="display: none;">Show Modal</a>
+
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <h4>{{getModal().title}}</h4>
+        <p>{{getModal().content}}</p>
+    </div>
+    <div class="modal-footer">
+        <a href="" class="modal-action modal-close waves-effect waves-green btn-flat"
+           data-ng-click="getModal().cancelCallback()">{{getModal().cancelButton}}</a>
+        <a href="" class="modal-action modal-close waves-effect waves-green btn-flat"
+           data-ng-click="getModal().successCallback()">{{getModal().successButton}}</a>
+    </div>
+</div>
