@@ -7,6 +7,9 @@
 SELECT enterprise_id.nextval from DUAL;
 INSERT INTO enterprise (enterprise, name, full_name, created) VALUES (enterprise_id.currval, 'Yhendatud Systeemid', 'Oy yhendatud Systeemid Ltd', CURRENT_TIMESTAMP());
 
+SELECT enterprise_id.nextval from DUAL;
+INSERT INTO enterprise (enterprise, name,full_name, created) VALUES (enterprise_id.currval, 'Torupood','Torupood OY', NOW());
+
 -- person
 SELECT person_id.nextval from DUAL;
 INSERT INTO person (person, first_name, last_name, identity_code, birth_date, created) VALUES (person_id.currval, 'Juhan', 'Juurikas', '54637474', '1967-11-11', CURRENT_TIMESTAMP());
@@ -19,6 +22,9 @@ INSERT INTO person (person, first_name, last_name, identity_code, birth_date, cr
 
 SELECT person_id.nextval from DUAL;
 INSERT INTO person (person, first_name, last_name, identity_code, birth_date, created) VALUES (person_id.currval, 'Kaarel','Klient','5555555555XXXX','1970-11-11',NOW());
+
+SELECT person_id.nextval from DUAL;
+INSERT INTO person (person, first_name, last_name, identity_code, birth_date, created) VALUES (person_id.currval, 'Anna','Aru','57838222','1975-11-11', NOW());
 
 -- employee
 SELECT employee_id.nextval from DUAL;
@@ -43,6 +49,12 @@ INSERT INTO user_account (user_account, subject_type_fk, subject_fk,username, pa
 -- customer
 SELECT customer_id.nextval from DUAL;
 INSERT INTO customer (customer, subject_fk, subject_type_fk) VALUES (customer_id.currval, 4, 1);
+
+SELECT customer_id.nextval from DUAL;
+INSERT INTO customer (customer, subject_fk,subject_type_fk) VALUES (customer_id.currval, 5, 1);
+
+SELECT customer_id.nextval from DUAL;
+INSERT INTO customer (customer, subject_fk,subject_type_fk) VALUES (customer_id.currval, 2, 2);
 
 -- authentication
 SELECT authentication_id.nextval from DUAL;

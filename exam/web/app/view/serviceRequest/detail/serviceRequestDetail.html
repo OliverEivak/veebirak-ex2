@@ -1,0 +1,60 @@
+<div data-customer-modal data-customer="serviceRequest.customer"></div>
+
+<div class="container">
+
+    <div class="row">
+        <div class="col s6 offset-s3">
+            <div class="card">
+                <div class="card-content">
+                    <h5>Service request</h5>
+
+                    <form name="data.form" novalidate>
+                        <div class="row">
+                            <div input-field class="col s12 input-and-button">
+                                <button class="btn waves-effect waves-light" name="button-find-customer"
+                                        data-ng-href='#customerModal' data-modal>Find customer</button>
+                                <div class="input-wrapper">
+                                    <input id="customer" type="text" name="customer" data-ng-model="serviceRequest.customer.subject.name"
+                                           required="" aria-required="true" disabled>
+                                    <label for="customer">Customer</label>
+
+                                    <div data-ng-messages="data.form.customer.$error">
+                                        <div data-ng-if="data.form.$submitted">
+                                            <div data-ng-message="required">Please choose a customer</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div input-field class="col s12">
+                                <textarea id="descriptionByCustomer" class="materialize-textarea"
+                                          data-ng-model="serviceRequest.descriptionByCustomer"></textarea>
+                                <label for="descriptionByCustomer">Description by customer</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div input-field class="col s12">
+                                <textarea id="descriptionByEmployee" class="materialize-textarea"
+                                          data-ng-model="serviceRequest.descriptionByEmployee"></textarea>
+                                <label for="descriptionByEmployee">Description by employee</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div input-field class="col s6">
+                                <button class="btn waves-effect waves-light full-width" type="submit" name="button-save"
+                                        data-ng-click="save()">Save</button>
+                            </div>
+                            <div input-field class="col s6">
+                                <button class="btn waves-effect waves-light full-width" name="button-create-order"
+                                        data-ng-click="createOrder()">Create order</button>
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

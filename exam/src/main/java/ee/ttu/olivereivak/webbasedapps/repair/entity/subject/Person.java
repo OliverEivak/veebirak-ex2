@@ -12,6 +12,10 @@ import javax.persistence.ManyToOne;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
+import org.hibernate.annotations.Formula;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import lombok.Getter;
 import lombok.Setter;
 
@@ -20,6 +24,7 @@ import lombok.Setter;
 @Setter
 @Table(name = "person")
 @SequenceGenerator(name = "person_seq", sequenceName = "person_id", allocationSize = 1)
+@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 public class Person implements Subject {
 
     @Id
@@ -32,6 +37,9 @@ public class Person implements Subject {
 
     @Column(name = "last_name", length = 100)
     private String lastName;
+
+    @Formula(value = "concat(first_name, ' ', last_name)")
+    private String name;
 
     @Column(name = "identity_code", length = 20)
     private String ssn;

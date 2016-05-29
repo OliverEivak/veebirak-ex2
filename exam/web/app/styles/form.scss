@@ -116,3 +116,18 @@ div[data-ng-messages].ng-inactive {
 .full-width {
   width: 100%;
 }
+
+/* Search box */
+.input-field #search-input {
+  border: 0;
+  font-size: 175%;
+  display: block;
+  width: calc(100% - 4rem);
+  margin: 5px 0 5px 0;
+  box-shadow: none;
+}
+
+.input-field #search-input:focus {
+  border: 0;
+  box-shadow: none;
+}

@@ -9,3 +9,15 @@ body {
 @import "form.scss";
 @import "icon.scss";
 @import "dropdown.scss";
+
+.no-margin {
+  margin: 0;
+}
+
+.no-padding {
+  padding: 0;
+}
+
+.small-margin {
+  margin-left: 5px;
+}

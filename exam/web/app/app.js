@@ -11,7 +11,10 @@
             'app.services',
             'app.header',
             'app.home',
-            'app.modal'
+            'app.modal',
+            'app.serviceRequest',
+            'app.serviceRequestDetail',
+            'app.customerModal'
         ])
 
         .config(['$routeProvider', function ($routeProvider) {

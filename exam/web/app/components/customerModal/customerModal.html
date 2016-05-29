@@ -1,0 +1,49 @@
+<div id="customerModal" class="modal">
+    <div class="modal-content">
+        <h4>Find customer</h4>
+        <div class="row">
+            <div class="col s12 card-panel">
+                <div class="row no-margin valign-wrapper">
+                    <div class="col s1 valign">
+                        <i class="material-icons prefix valign">search</i>
+                    </div>
+                    <div class="col s10 valign">
+                        <div class="input-field no-margin">
+                            <input id="search-input" type="text" required data-ng-model="data.query"
+                                   data-ng-model-options="{ debounce: 1000 }" autofocus>
+                            <label for="search-input"></label>
+                        </div>
+                    </div>
+                    <div class="col s1 valign small-margin no-padding">
+                        <a href="" data-ng-click="data.query = ''" data-ng-if="data.query">
+                            <i class="material-icons valign no-padding">close</i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <table>
+            <thead>
+            <tr>
+                <th data-field="id">ID</th>
+                <th data-field="name">Name</th>
+                <th data-field="actions"></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr data-ng-repeat="customer in data.customers">
+                <td>{{customer.id}}</td>
+                <td>{{customer.subject.name}}</td>
+                <td>
+                    <a href="" data-ng-click="choose(customer)" class="waves-effect waves-light btn">Choose</a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+    <div class="modal-footer">
+        <a href="" class="modal-action modal-close waves-effect waves-green btn-flat" id="customer-modal-close">Close</a>
+    </div>
+</div>

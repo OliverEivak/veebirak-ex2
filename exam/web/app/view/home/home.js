@@ -9,8 +9,8 @@ angular.module('app.home', ['ngRoute'])
         });
     }])
 
-    .controller('HomeCtrl', ['$scope', '$timeout', '$location', 'loginService', 'authenticationService',
-        function ($scope, $timeout, $location, loginService, authenticationService) {
+    .controller('HomeCtrl', ['$scope', 'loginService', 'authenticationService',
+        function ($scope, loginService, authenticationService) {
 
             $scope.isAuthenticated = authenticationService.isAuthenticated;
 
