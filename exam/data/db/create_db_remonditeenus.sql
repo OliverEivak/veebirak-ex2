@@ -2,22 +2,22 @@
 CREATE SEQUENCE service_request_id ;
 
 CREATE TABLE service_request
-( service_request numeric(10,0) NOT NULL DEFAULT nextval('service_request_id'),
-  customer_fk numeric(10,0),
-  created_by numeric(10,0),
+( service_request bigint NOT NULL DEFAULT nextval('service_request_id'),
+  customer_fk bigint,
+  created_by bigint,
   created timestamp,
   service_desc_by_customer text,
   service_desc_by_employee text,
-  service_request_status_type_fk numeric(10,0),
+  service_request_status_type_fk bigint,
   CONSTRAINT service_request_pk PRIMARY KEY (service_request)
 );
 
 CREATE SEQUENCE device_type_id ;
 
 CREATE TABLE device_type
-( device_type numeric(10,0) NOT NULL DEFAULT nextval('device_type_id'),
-  super_type_fk numeric(10,0),
-  level numeric(10,0),
+( device_type bigint NOT NULL DEFAULT nextval('device_type_id'),
+  super_type_fk bigint,
+  level bigint,
   type_name varchar(200),
   CONSTRAINT device_type_pk PRIMARY KEY (device_type)
 );
@@ -25,15 +25,15 @@ CREATE TABLE device_type
 CREATE SEQUENCE service_order_id ;
 
 CREATE TABLE service_order
-( service_order numeric(10,0) NOT NULL DEFAULT nextval('service_order_id'),
-  so_status_type_fk numeric(10,0),
-  created_by numeric(10,0),
-  service_request_fk numeric(10,0),
-  updated_by numeric(10,0),
+( service_order bigint NOT NULL DEFAULT nextval('service_order_id'),
+  so_status_type_fk bigint,
+  created_by bigint,
+  service_request_fk bigint,
+  updated_by bigint,
   created timestamp,
   updated timestamp,
   status_changed timestamp,
-  status_changed_by numeric(10,0),
+  status_changed_by bigint,
   price_total numeric,
   note text,
   CONSTRAINT service_order_pk PRIMARY KEY (service_order)
@@ -42,12 +42,12 @@ CREATE TABLE service_order
 CREATE SEQUENCE service_note_id ;
 
 CREATE TABLE service_note
-( service_note numeric(10,0) NOT NULL DEFAULT nextval('service_note_id'),
-  customer_fk numeric(10,0),
-  employee_fk numeric(10,0),
-  service_order_fk numeric(10,0),
-  service_device_fk numeric(10,0),
-  note_author_type numeric(10,0),
+( service_note bigint NOT NULL DEFAULT nextval('service_note_id'),
+  customer_fk bigint,
+  employee_fk bigint,
+  service_order_fk bigint,
+  service_device_fk bigint,
+  note_author_type bigint,
   created timestamp,
   note text,
   CONSTRAINT service_note_pk PRIMARY KEY (service_note)
@@ -57,10 +57,10 @@ CREATE TABLE service_note
 CREATE SEQUENCE service_device_id ;
 
 CREATE TABLE service_device
-( service_device numeric(10,0) NOT NULL DEFAULT nextval('service_device_id'),
-  service_device_status_type_fk numeric(10,0),
-  device_fk numeric(10,0),
-  service_order_fk numeric(10,0),
+( service_device bigint NOT NULL DEFAULT nextval('service_device_id'),
+  service_device_status_type_fk bigint,
+  device_fk bigint,
+  service_order_fk bigint,
   to_store timestamp,
   from_store timestamp,
   service_description text,
@@ -72,8 +72,8 @@ CREATE TABLE service_device
 CREATE SEQUENCE device_id ;
 
 CREATE TABLE device
-( device numeric(10,0) NOT NULL DEFAULT nextval('device_id'),
-  device_type_fk numeric(10,0),
+( device bigint NOT NULL DEFAULT nextval('device_id'),
+  device_type_fk bigint,
   name text,
   reg_no varchar(100),
   description text,
@@ -85,21 +85,21 @@ CREATE TABLE device
 
 
 CREATE TABLE service_device_status_type
-( service_device_status_type numeric(10,0) NOT NULL ,
+( service_device_status_type bigint NOT NULL ,
   type_name varchar(200),
   CONSTRAINT service_device_status_type_pk PRIMARY KEY (service_device_status_type)
 );
 
 
 CREATE TABLE service_request_status_type
-( service_request_status_type numeric(10,0) NOT NULL ,
+( service_request_status_type bigint NOT NULL ,
   type_name varchar(200),
   CONSTRAINT service_request_status_type_pk PRIMARY KEY (service_request_status_type)
 );
 
 
 CREATE TABLE so_status_type
-( so_status_type numeric(10,0) NOT NULL ,
+( so_status_type bigint NOT NULL ,
   type_name varchar(200),
   CONSTRAINT so_status_type_pk PRIMARY KEY (so_status_type)
 );
@@ -109,38 +109,38 @@ CREATE TABLE so_status_type
 CREATE SEQUENCE service_action_id ;
 
 CREATE TABLE service_action
-( service_action numeric(10,0) NOT NULL DEFAULT nextval('service_action_id'),
-  service_action_status_type_fk numeric(10,0),
-  service_type_fk numeric(10,0),
-  service_device_fk numeric(10,0),
-  service_order_fk numeric(10,0),
+( service_action bigint NOT NULL DEFAULT nextval('service_action_id'),
+  service_action_status_type_fk bigint,
+  service_type_fk bigint,
+  service_device_fk bigint,
+  service_order_fk bigint,
   service_amount numeric,
   price numeric,
   price_updated timestamp,
   action_description text,
   created timestamp,
-  created_by numeric(10,0),
+  created_by bigint,
   CONSTRAINT service_action_pk PRIMARY KEY (service_action)
 );
 
 CREATE SEQUENCE service_part_id ;
 
 CREATE TABLE service_part
-( service_part numeric(10,0) NOT NULL DEFAULT nextval('service_part_id'),
-  service_order_fk numeric(10,0),
-  service_device_fk numeric(10,0),
+( service_part bigint NOT NULL DEFAULT nextval('service_part_id'),
+  service_order_fk bigint,
+  service_device_fk bigint,
   part_name text,
   serial_no text,
-  part_count numeric(10,0),
+  part_count bigint,
   part_price numeric,
   created timestamp,
-  created_by numeric(10,0),
+  created_by bigint,
   CONSTRAINT service_part_pk PRIMARY KEY (service_part)
 );
 
 
 CREATE TABLE service_action_status_type
-( service_action_status_type numeric(10,0) NOT NULL ,
+( service_action_status_type bigint NOT NULL ,
   type_name varchar(200),
   CONSTRAINT service_action_status_type_pk PRIMARY KEY (service_action_status_type)
 );
@@ -148,8 +148,8 @@ CREATE TABLE service_action_status_type
 CREATE SEQUENCE service_type_id ;
 
 CREATE TABLE service_type
-( service_type numeric(10,0) NOT NULL DEFAULT nextval('service_type_id') ,
-  service_unit_type_fk numeric(10,0),
+( service_type bigint NOT NULL DEFAULT nextval('service_type_id') ,
+  service_unit_type_fk bigint,
   type_name varchar(200),
   service_price numeric,
   CONSTRAINT service_type_pk PRIMARY KEY (service_type)
@@ -160,7 +160,7 @@ CREATE TABLE service_type
 
 
 CREATE TABLE service_unit_type
-( service_unit_type numeric(10,0) NOT NULL ,
+( service_unit_type bigint NOT NULL ,
   type_name varchar(200),
   CONSTRAINT service_unit_pk PRIMARY KEY (service_unit_type)
 );
@@ -169,10 +169,10 @@ CREATE TABLE service_unit_type
 CREATE SEQUENCE invoice_id ;
 
 CREATE TABLE invoice
-( invoice numeric(10,0) NOT NULL DEFAULT nextval('invoice_id') ,
-  invoice_status_type_fk numeric(10,0),
-  service_order_fk numeric(10,0),
-  customer_fk numeric(10,0),
+( invoice bigint NOT NULL DEFAULT nextval('invoice_id') ,
+  invoice_status_type_fk bigint,
+  service_order_fk bigint,
+  customer_fk bigint,
   invoice_date date,
   due_date date,
   price_total numeric,
@@ -185,7 +185,7 @@ CREATE TABLE invoice
 );
 
 CREATE TABLE invoice_status_type
-( invoice_status_type numeric(10,0) NOT NULL ,
+( invoice_status_type bigint NOT NULL ,
   type_name varchar(200),
   CONSTRAINT invoice_status_type_pk PRIMARY KEY (invoice_status_type)
 );
@@ -194,10 +194,10 @@ CREATE TABLE invoice_status_type
 CREATE SEQUENCE invoice_row_id ;
 
 CREATE TABLE invoice_row
-( invoice_row numeric(10,0) NOT NULL DEFAULT nextval('invoice_row_id') ,
-  invoice_fk numeric(10,0),
-  service_action_fk numeric(10,0),
-  service_part_fk numeric(10,0),
+( invoice_row bigint NOT NULL DEFAULT nextval('invoice_row_id') ,
+  invoice_fk bigint,
+  service_action_fk bigint,
+  service_part_fk bigint,
   action_part_description text,
   amount numeric,
   price_total numeric,

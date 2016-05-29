@@ -30,7 +30,7 @@ angular.module('app.services.authenticationService', []).
                 getUser: function () {
                     var authentication = JSON.parse(localStorage.getItem("authentication"));
                     if (authentication) {
-                        return authentication.user;
+                        return authentication.userAccount;
                     }
 
                     return null;

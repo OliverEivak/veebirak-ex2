@@ -15,7 +15,7 @@ angular.module('app.services.loginService', []).
                         if (response.data) {
                             authenticationService.setAuthentication(response.data);
                             $timeout(function() {
-                                $location.url('/practice');
+                                $location.url('/');
                             }, 300);
                         } else {
                             errorCallback(response);

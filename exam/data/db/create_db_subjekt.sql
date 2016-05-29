@@ -1,13 +1,13 @@
 CREATE SEQUENCE person_id ;
 
 CREATE TABLE person
-( person numeric(10,0) NOT NULL DEFAULT nextval('person_id'),
+( person bigint NOT NULL DEFAULT nextval('person_id'),
   first_name varchar(100),
   last_name varchar(100),
   identity_code varchar(20),
   birth_date date,
-  created_by numeric(10,0),
-  updated_by numeric(10,0),
+  created_by bigint,
+  updated_by bigint,
   created timestamp,
   updated timestamp,
   CONSTRAINT person_pk PRIMARY KEY (person)
@@ -17,15 +17,15 @@ CREATE TABLE person
 CREATE SEQUENCE user_account_id ;
 
 CREATE TABLE user_account
-( user_account numeric(10,0) NOT NULL DEFAULT nextval('user_account_id'),
-  subject_type_fk numeric(10,0),
-  subject_fk numeric(10,0),
+( user_account bigint NOT NULL DEFAULT nextval('user_account_id'),
+  subject_type_fk bigint,
+  subject_fk bigint,
   username varchar(50),
   passw varchar(300),
-  status numeric(10,0),
+  status bigint,
   valid_from date,
   valid_to date,
-  created_by numeric(10,0),
+  created_by bigint,
   created timestamp,
   password_never_expires varchar(1),
   CONSTRAINT user_account_pk PRIMARY KEY (user_account)
@@ -35,22 +35,22 @@ CREATE TABLE user_account
 CREATE SEQUENCE customer_id ;
 
 CREATE TABLE customer
-( customer numeric(10,0) NOT NULL DEFAULT nextval('customer_id'),
-  subject_fk numeric(10,0),
-  subject_type_fk numeric(10,0),
+( customer bigint NOT NULL DEFAULT nextval('customer_id'),
+  subject_fk bigint,
+  subject_type_fk bigint,
   CONSTRAINT customer_pk PRIMARY KEY (customer)
 ) ;
 
 
 
 CREATE TABLE subject_type
-( subject_type numeric(10,0) NOT NULL ,
+( subject_type bigint NOT NULL ,
   type_name varchar(200),
   CONSTRAINT subject_type_pk PRIMARY KEY (subject_type)
 ) ;
 
 CREATE TABLE employee_role_type
-( employee_role_type numeric(10,0) NOT NULL ,
+( employee_role_type bigint NOT NULL ,
   type_name varchar(200),
   CONSTRAINT employee_role_type_pk PRIMARY KEY (employee_role_type)
 ) ;
@@ -58,9 +58,9 @@ CREATE TABLE employee_role_type
 CREATE SEQUENCE employee_role_id ;
 
 CREATE TABLE employee_role
-( employee_role numeric(10,0) NOT NULL DEFAULT nextval('employee_role_id'),
-  employee_fk numeric(10,0),
-  employee_role_type_fk numeric(10,0),
+( employee_role bigint NOT NULL DEFAULT nextval('employee_role_id'),
+  employee_fk bigint,
+  employee_role_type_fk bigint,
   active varchar(1),
   CONSTRAINT employee_role_pk PRIMARY KEY (employee_role)
 ) ;
@@ -68,17 +68,17 @@ CREATE TABLE employee_role
 CREATE SEQUENCE employee_id ;
 
 CREATE TABLE employee
-( employee numeric(10,0) NOT NULL DEFAULT nextval('employee_id'),
-  person_fk numeric(10,0),
-  enterprise_fk numeric(10,0),
-  struct_unit_fk numeric(10,0),
+( employee bigint NOT NULL DEFAULT nextval('employee_id'),
+  person_fk bigint,
+  enterprise_fk bigint,
+  struct_unit_fk bigint,
   active varchar(1),
   CONSTRAINT employee_pk PRIMARY KEY (employee)
 ) ;
 
 
 CREATE TABLE address_type
-( address_type numeric(10,0) NOT NULL ,
+( address_type bigint NOT NULL ,
   type_name varchar(200),
   CONSTRAINT address_type_pk PRIMARY KEY (address_type)
 ) ;
@@ -86,10 +86,10 @@ CREATE TABLE address_type
 CREATE SEQUENCE address_id ;
 
 CREATE TABLE address
-( address numeric(10,0) NOT NULL DEFAULT nextval('address_id'),
-  address_type_fk numeric(10,0),
-  subject_fk numeric(10,0),
-  subject_type_fk numeric(10,0),
+( address bigint NOT NULL DEFAULT nextval('address_id'),
+  address_type_fk bigint,
+  subject_fk bigint,
+  subject_type_fk bigint,
   country varchar(50),
   county varchar(100),
   town_village varchar(100),
@@ -99,7 +99,7 @@ CREATE TABLE address
 ) ;
 
 CREATE TABLE contact_type
-( contact_type numeric(10,0) NOT NULL ,
+( contact_type bigint NOT NULL ,
   type_name varchar(200),
   CONSTRAINT contact_type_pk PRIMARY KEY (contact_type)
 ) ;
@@ -107,19 +107,19 @@ CREATE TABLE contact_type
 CREATE SEQUENCE contact_id ;
 
 CREATE TABLE contact
-( contact numeric(10,0) NOT NULL DEFAULT nextval('contact_id'),
-  subject_fk numeric(10,0),
-  contact_type_fk numeric(10,0),
+( contact bigint NOT NULL DEFAULT nextval('contact_id'),
+  subject_fk bigint,
+  contact_type_fk bigint,
   value_text text,
-  orderby numeric(10,0),
-  subject_type_fk numeric(10,0),
+  orderby bigint,
+  subject_type_fk bigint,
   note text,
   CONSTRAINT contact_pk PRIMARY KEY (contact)
 ) ;
 
 
 CREATE TABLE ent_per_relation_type
-( ent_per_relation_type numeric(10,0) NOT NULL ,
+( ent_per_relation_type bigint NOT NULL ,
   type_name varchar(200),
   CONSTRAINT ent_per_relation_type_pk PRIMARY KEY (ent_per_relation_type)
 ) ;
@@ -128,10 +128,10 @@ CREATE TABLE ent_per_relation_type
 CREATE SEQUENCE enterprise_person_relation_id ;
 
 CREATE TABLE enterprise_person_relation
-( enterprise_person_relation numeric(10,0) NOT NULL DEFAULT nextval('enterprise_person_relation_id'),
-  person_fk numeric(10,0),
-  enterprise_fk numeric(10,0),
-  ent_per_relation_type_fk numeric(10,0),
+( enterprise_person_relation bigint NOT NULL DEFAULT nextval('enterprise_person_relation_id'),
+  person_fk bigint,
+  enterprise_fk bigint,
+  ent_per_relation_type_fk bigint,
   CONSTRAINT enterprise_person_relation_pk PRIMARY KEY (enterprise_person_relation)
 ) ;
 
@@ -139,11 +139,11 @@ CREATE TABLE enterprise_person_relation
 CREATE SEQUENCE enterprise_id ;
 
 CREATE TABLE enterprise
-( enterprise numeric(10,0) NOT NULL DEFAULT nextval('enterprise_id'),
+( enterprise bigint NOT NULL DEFAULT nextval('enterprise_id'),
   name text,
   full_name text,
-  created_by numeric(10,0),
-  updated_by numeric(10,0),
+  created_by bigint,
+  updated_by bigint,
   created timestamp,
   updated timestamp,
   CONSTRAINT enterprise_pk PRIMARY KEY (enterprise)
@@ -152,11 +152,11 @@ CREATE TABLE enterprise
 CREATE SEQUENCE subject_attribute_id ;
 
 CREATE TABLE subject_attribute
-( subject_attribute numeric(10,0) NOT NULL DEFAULT nextval('subject_attribute_id'),
-  subject_fk numeric(10,0),
-  subject_attribute_type_fk numeric(10,0),
-  subject_type_fk numeric(10,0),
-  orderby numeric(10,0),
+( subject_attribute bigint NOT NULL DEFAULT nextval('subject_attribute_id'),
+  subject_fk bigint,
+  subject_attribute_type_fk bigint,
+  subject_type_fk bigint,
+  orderby bigint,
   value_text text,
   value_number numeric,
   value_date date,
@@ -167,11 +167,11 @@ CREATE TABLE subject_attribute
 CREATE SEQUENCE subject_attribute_type_id ;
 
 CREATE TABLE subject_attribute_type
-( subject_attribute_type numeric(10,0) NOT NULL DEFAULT nextval('subject_attribute_type_id'),
-  subject_type_fk numeric(10,0),
+( subject_attribute_type bigint NOT NULL DEFAULT nextval('subject_attribute_type_id'),
+  subject_type_fk bigint,
   type_name varchar(200),
   data_type numeric(1,0),
-  orderby numeric(10,0),
+  orderby bigint,
   required varchar(1),
   multiple_attributes varchar(1),
   created_by_default varchar(1),
@@ -181,10 +181,10 @@ CREATE TABLE subject_attribute_type
 CREATE SEQUENCE struct_unit_id ;
 
 CREATE TABLE struct_unit
-( struct_unit numeric(10,0) NOT NULL DEFAULT nextval('struct_unit_id'),
-  enterprise_fk numeric(10,0),
-  upper_unit_fk numeric(10,0),
-  level numeric(10,0),
+( struct_unit bigint NOT NULL DEFAULT nextval('struct_unit_id'),
+  enterprise_fk bigint,
+  upper_unit_fk bigint,
+  level bigint,
   name varchar(200),
   CONSTRAINT struct_unit_pk PRIMARY KEY (struct_unit)
 ) ;

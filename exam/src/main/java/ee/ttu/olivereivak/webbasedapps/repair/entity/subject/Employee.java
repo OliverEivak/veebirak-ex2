@@ -33,7 +33,7 @@ public class Employee {
     private Enterprise enterprise;
 
     // TODO: can we delete this from db?
-    @Column(name = "struct_unit")
+    @Column(name = "struct_unit_fk")
     private Long structureUnit;
 
     // TODO: this data type is retarded

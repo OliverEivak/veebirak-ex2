@@ -9,7 +9,9 @@
             <li data-ng-class="{active: isPage('/something')}" data-ng-if="isAuthenticated()"><a href="/something">Something</a></li>
 
             <li data-ng-show="isAuthenticated()">
-                <a href="" data-activates='userDropdown' dropdown data-beloworigin="true" data-hover="true">{{getUser().username}}!</a>
+                <a href="" data-activates='userDropdown' dropdown data-beloworigin="true" data-hover="true" class="with-icon">
+                    <i class="material-icons md-light">perm_identity</i>{{getUser().username}}
+                </a>
             </li>
         </ul>
 
