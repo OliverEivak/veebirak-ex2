@@ -14,7 +14,11 @@
             'app.modal',
             'app.serviceRequest',
             'app.serviceRequestDetail',
-            'app.customerModal'
+            'app.customerModal',
+            'app.serviceOrder',
+            'app.serviceOrderDetail',
+            'app.findDeviceModal',
+            'app.createDeviceModal'
         ])
 
         .config(['$routeProvider', function ($routeProvider) {

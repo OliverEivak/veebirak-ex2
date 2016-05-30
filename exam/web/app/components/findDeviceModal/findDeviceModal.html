@@ -1,0 +1,79 @@
+<div id="findDeviceModal" class="modal">
+    <div class="modal-content">
+        <h4>Find device</h4>
+        <form name="data.form" novalidate>
+            <div class="row">
+                <div input-field class="col s4">
+                    <select material-select watch id="deviceType" name="deviceType" data-ng-model="search.deviceType">
+                        <optgroup label="{{topLevelDeviceType.name}}" data-ng-repeat="topLevelDeviceType in data.topLevelDeviceTypes">
+                            <option value="{{deviceType.id}}" data-ng-repeat="deviceType in topLevelDeviceType.deviceTypes">{{deviceType.name}}</option>
+                        </optgroup>
+                    </select>
+                    <label for="clientName">Device Type</label>
+                </div>
+                <div input-field class="col s4">
+                    <input id="name" type="text" name="name" data-ng-model="search.name">
+                    <label for="name">Name</label>
+                </div>
+                <div input-field class="col s4">
+                    <input id="model" type="text" name="model" data-ng-model="search.model">
+                    <label for="model">Model</label>
+                </div>
+                <div input-field class="col s4">
+                    <input id="description" type="text" name="description" data-ng-model="search.description">
+                    <label for="description">Description</label>
+                </div>
+                <div input-field class="col s4">
+                    <input id="manufacturer" type="text" name="manufacturer" data-ng-model="search.manufacturer">
+                    <label for="manufacturer">Manufacturer</label>
+                </div>
+                <div input-field class="col s4">
+                    <input id="registrationNumber" type="text" name="registrationNumber" data-ng-model="search.registrationNumber">
+                    <label for="registrationNumber">Registration number</label>
+                </div>
+                <div input-field class="col s4">
+                    <input id="clientName" type="text" name="clientName" data-ng-model="search.clientName">
+                    <label for="clientName">Client name</label>
+                </div>
+                <div input-field class="col s4">
+                    <button class="btn waves-effect waves-light full-width" type="submit" name="button-search"
+                            data-ng-click="doSearch()">Search</button>
+                </div>
+                <div input-field class="col s4">
+                    <button class="btn waves-effect waves-light full-width" type="submit" name="button-clear"
+                            data-ng-click="clear()">Clear</button>
+                </div>
+            </div>
+        </form>
+
+        <table>
+            <thead>
+            <tr>
+                <th data-field="id">ID</th>
+                <th data-field="name">Name</th>
+                <th data-field="model">Model</th>
+                <th data-field="manufacturer">Manufacturer</th>
+                <th data-field="registrationNumber">Reg no</th>
+                <th data-field="actions"></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr data-ng-repeat="device in data.devices">
+                <td>{{device.id}}</td>
+                <td>{{device.name}}</td>
+                <td>{{device.model}}</td>
+                <td>{{device.manufacturer}}</td>
+                <td>{{device.registrationNumber}}</td>
+                <td>
+                    <a href="" data-ng-click="choose(device)" class="waves-effect waves-light btn right">Choose</a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+    <div class="modal-footer">
+        <a href="" class="modal-action modal-close waves-effect waves-green btn-flat" id="find-device-modal-close">Close</a>
+    </div>
+</div>

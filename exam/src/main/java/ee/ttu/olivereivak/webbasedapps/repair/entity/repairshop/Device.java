@@ -46,11 +46,11 @@ public class Device {
     /**
      * Set a device type for this device.
      * @param deviceType DeviceType to set.
-     * @throws IllegalArgumentException if the DeviceType has a parent (or is not a level 1 DeviceType)
+     * @throws IllegalArgumentException if the DeviceType has a parent (or is a level 1 DeviceType)
      */
     public void setDeviceType(DeviceType deviceType) {
-        if (deviceType.getParent() != null || deviceType.getLevel() != 1L) {
-            throw new IllegalArgumentException("Can not set a top level DeviceType for this Device.");
+        if (deviceType.getParent() == null || deviceType.getLevel() == 1L) {
+            throw new IllegalArgumentException("Can not set a top level DeviceType");
         }
         this.deviceType = deviceType;
     }

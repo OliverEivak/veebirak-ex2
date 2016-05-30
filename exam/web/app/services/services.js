@@ -7,7 +7,10 @@ angular.module('app.services', [
     'app.services.httpService',
     'app.services.modalService',
     'app.services.serviceRequestService',
-    'app.services.customerService'
+    'app.services.customerService',
+    'app.services.serviceOrderService',
+    'app.services.deviceService',
+    'app.services.deviceTypeService'
 ])
 
     .value('services', '0.1');

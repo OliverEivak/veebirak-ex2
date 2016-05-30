@@ -34,9 +34,9 @@ public class ServiceDevice {
     @JoinColumn(name = "device_fk")
     private Device device;
 
-    @ManyToOne
-    @JoinColumn(name = "service_order_fk")
-    private ServiceOrder serviceOrder;
+//    @ManyToOne
+//    @JoinColumn(name = "service_order_fk")
+//    private ServiceOrder serviceOrder;
 
     @Column(name = "to_store")
     private Instant toStore;

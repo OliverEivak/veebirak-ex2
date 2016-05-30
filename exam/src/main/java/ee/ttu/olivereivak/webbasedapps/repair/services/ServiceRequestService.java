@@ -31,10 +31,15 @@ public class ServiceRequestService {
             status.setId(1L); // status = registered
 
             serviceRequest.setServiceRequestStatusType(status);
-            serviceRequest.setCreated(Instant.now());
-        }
 
-        serviceRequest.setCreator(userAccount.getEmployee());
+            serviceRequest.setCreator(userAccount.getEmployee());
+            serviceRequest.setCreated(Instant.now());
+        } else {
+            // not allowed to change creator and creation time anymore
+            ServiceRequest original = serviceRequestDAO.findByID(serviceRequest.getId());
+            serviceRequest.setCreator(original.getCreator());
+            serviceRequest.setCreated(original.getCreated());
+        }
 
         return serviceRequestDAO.update(serviceRequest);
     }

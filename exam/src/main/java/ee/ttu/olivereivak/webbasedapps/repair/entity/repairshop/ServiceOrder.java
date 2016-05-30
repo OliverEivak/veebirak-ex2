@@ -1,7 +1,12 @@
 package ee.ttu.olivereivak.webbasedapps.repair.entity.repairshop;
 
+import static javax.persistence.CascadeType.MERGE;
+import static javax.persistence.CascadeType.PERSIST;
+import static javax.persistence.FetchType.EAGER;
+
 import java.math.BigDecimal;
 import java.time.Instant;
+import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -9,6 +14,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
@@ -61,5 +67,9 @@ public class ServiceOrder {
 
     @Column(columnDefinition = "text")
     private String note;
+
+    @OneToMany(fetch = EAGER, cascade = { MERGE, PERSIST })
+    @JoinColumn(name = "service_order_fk")
+    private List<ServiceDevice> serviceDevices;
 
 }

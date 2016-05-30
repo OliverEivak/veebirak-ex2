@@ -1,0 +1,42 @@
+<div id="createDeviceModal" class="modal">
+    <div class="modal-content">
+        <h4>Create device</h4>
+        <form name="data.form" novalidate>
+            <div class="row">
+                <div input-field class="col s4">
+                    <select material-select watch id="create-device-device-type" name="deviceType" data-ng-model="search.deviceType">
+                        <optgroup label="{{topLevelDeviceType.name}}" data-ng-repeat="topLevelDeviceType in data.topLevelDeviceTypes">
+                            <option value="{{deviceType.id}}" data-ng-repeat="deviceType in topLevelDeviceType.deviceTypes">{{deviceType.name}}</option>
+                        </optgroup>
+                    </select>
+                    <label for="create-device-device-type">Device Type</label>
+                </div>
+                <div input-field class="col s4">
+                    <input id="create-device-name" type="text" name="name" data-ng-model="search.name">
+                    <label for="create-device-name">Name</label>
+                </div>
+                <div input-field class="col s4">
+                    <input id="create-device-model" type="text" name="model" data-ng-model="search.model">
+                    <label for="create-device-model">Model</label>
+                </div>
+                <div input-field class="col s4">
+                    <input id="create-device-description" type="text" name="description" data-ng-model="search.description">
+                    <label for="create-device-description">Description</label>
+                </div>
+                <div input-field class="col s4">
+                    <input id="create-device-manufacturer" type="text" name="manufacturer" data-ng-model="search.manufacturer">
+                    <label for="create-device-manufacturer">Manufacturer</label>
+                </div>
+                <div input-field class="col s4">
+                    <input id="create-device-registration-number" type="text" name="registrationNumber" data-ng-model="search.registrationNumber">
+                    <label for="create-device-registration-number">Registration number</label>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div class="modal-footer">
+        <a href="" class="modal-action modal-close waves-effect waves-green btn-flat" id="create-device-modal-close">Close</a>
+        <a href="" data-ng-click="save()" class="modal-action modal-close waves-effect waves-green btn-flat" id="create-device-modal-save">Save</a>
+    </div>
+</div>

@@ -3,17 +3,13 @@
 angular.module('app.serviceRequestDetail', ['ngRoute'])
 
     .config(['$routeProvider', function ($routeProvider) {
-        $routeProvider.when('/serviceRequests/new', {
+        var serviceRequestDetail = {
             templateUrl: 'view/serviceRequest/detail/serviceRequestDetail.html',
             controller: 'ServiceRequestDetailCtrl'
-        });
-    }])
+        };
 
-    .config(['$routeProvider', function ($routeProvider) {
-        $routeProvider.when('/serviceRequests/:serviceRequestID', {
-            templateUrl: 'view/serviceRequest/detail/serviceRequestDetail.html',
-            controller: 'ServiceRequestDetailCtrl'
-        });
+        $routeProvider.when('/serviceRequests/new', serviceRequestDetail);
+        $routeProvider.when('/serviceRequests/:serviceRequestID', serviceRequestDetail);
     }])
 
     .controller('ServiceRequestDetailCtrl', ['$scope', '$location', 'serviceRequestService', '$routeParams',
@@ -46,6 +42,14 @@ angular.module('app.serviceRequestDetail', ['ngRoute'])
                     id: 2
                 };
                 $scope.save();
+            };
+
+            $scope.createOrder = function() {
+                serviceRequestService.update($scope.serviceRequest, function(serviceRequest) {
+                    $location.url('/serviceOrders/new?serviceRequest=' + serviceRequest.id);
+                }, function() {
+                    console.error('Failed to save ServiceRequest')
+                });
             };
 
         }]);

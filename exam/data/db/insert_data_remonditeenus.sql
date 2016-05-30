@@ -41,10 +41,10 @@ INSERT INTO service_type (type_name,service_unit_type_fk,service_price)
 VALUES ('Laserkahuri aku vahetus',3,1000);
 
 /* seadme tyybid */
-INSERT INTO device_type (type_name, level,super_type_fk) VALUES ('laserseadmed',1,0);
-INSERT INTO device_type (type_name, level,super_type_fk) VALUES ('raadiotehnika',1,0);
-INSERT INTO device_type (type_name, level,super_type_fk) VALUES ('arvutid',1,0);
-INSERT INTO device_type (type_name, level,super_type_fk) VALUES ('kodutehnika',1,0);
+INSERT INTO device_type (type_name, level,super_type_fk) VALUES ('laserseadmed',1,null);
+INSERT INTO device_type (type_name, level,super_type_fk) VALUES ('raadiotehnika',1,null);
+INSERT INTO device_type (type_name, level,super_type_fk) VALUES ('arvutid',1,null);
+INSERT INTO device_type (type_name, level,super_type_fk) VALUES ('kodutehnika',1,null);
 
 INSERT INTO device_type (type_name, level,super_type_fk) VALUES ('hyperboloidid',2,1);
 INSERT INTO device_type (type_name, level,super_type_fk) VALUES ('laserkahurid',2,1);

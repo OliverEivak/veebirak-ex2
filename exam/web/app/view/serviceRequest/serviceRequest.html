@@ -20,7 +20,7 @@
                         <tbody>
                             <tr data-ng-repeat="serviceRequest in data.serviceRequests">
                                 <td>{{serviceRequest.id}}</td>
-                                <td>{{serviceRequest.customer.subject.name || (serviceRequest.customer.subject.firstName + ' ' + serviceRequest.customer.subject.lastName)}}</td>
+                                <td>{{serviceRequest.customer.subject.name}}</td>
                                 <td>{{serviceRequest.descriptionByCustomer}}</td>
                                 <td>{{serviceRequest.descriptionByEmployee}}</td>
                                 <td>{{serviceRequest.serviceRequestStatusType.name}}</td>
