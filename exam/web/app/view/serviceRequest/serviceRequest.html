@@ -13,6 +13,7 @@
                                 <th data-field="name">Customer</th>
                                 <th data-field="descriptionByClient">Description (customer)</th>
                                 <th data-field="descriptionByEmployee">Description (employee)</th>
+                                <th data-field="status">Status</th>
                                 <th data-field="actions"></th>
                             </tr>
                         </thead>
@@ -22,6 +23,7 @@
                                 <td>{{serviceRequest.customer.subject.name || (serviceRequest.customer.subject.firstName + ' ' + serviceRequest.customer.subject.lastName)}}</td>
                                 <td>{{serviceRequest.descriptionByCustomer}}</td>
                                 <td>{{serviceRequest.descriptionByEmployee}}</td>
+                                <td>{{serviceRequest.serviceRequestStatusType.name}}</td>
                                 <td>
                                     <a data-ng-href="/serviceRequests/{{serviceRequest.id}}" class="waves-effect waves-light btn right">Open</a>
                                 </td>

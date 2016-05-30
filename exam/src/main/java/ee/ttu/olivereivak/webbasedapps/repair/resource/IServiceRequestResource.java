@@ -24,6 +24,7 @@ public interface IServiceRequestResource {
 
     @GET
     @Path("{serviceRequestID}")
+    @RolesAllowed({"EMPLOYEE"})
     ServiceRequest get(@PathParam("serviceRequestID") Long serviceRequestID);
 
     @POST

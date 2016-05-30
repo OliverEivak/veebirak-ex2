@@ -28,6 +28,12 @@
                         </div>
                         <div class="row">
                             <div input-field class="col s12">
+                                <input id="status" type="text" name="status" data-ng-model="serviceRequest.serviceRequestStatusType.name" disabled>
+                                <label for="status">Status</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div input-field class="col s12">
                                 <textarea id="descriptionByCustomer" class="materialize-textarea"
                                           data-ng-model="serviceRequest.descriptionByCustomer"></textarea>
                                 <label for="descriptionByCustomer">Description by customer</label>
@@ -48,6 +54,10 @@
                             <div input-field class="col s6">
                                 <button class="btn waves-effect waves-light full-width" name="button-create-order"
                                         data-ng-click="createOrder()">Create order</button>
+                            </div>
+                            <div input-field class="col s6 offset-s6">
+                                <button class="btn waves-effect waves-light full-width" name="button-reject"
+                                        data-ng-click="reject()">Reject</button>
                             </div>
                         </div>
                     </form>

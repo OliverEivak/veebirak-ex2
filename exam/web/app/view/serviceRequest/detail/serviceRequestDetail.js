@@ -41,4 +41,11 @@ angular.module('app.serviceRequestDetail', ['ngRoute'])
                 });
             };
 
+            $scope.reject = function() {
+                $scope.serviceRequest.serviceRequestStatusType = {
+                    id: 2
+                };
+                $scope.save();
+            };
+
         }]);

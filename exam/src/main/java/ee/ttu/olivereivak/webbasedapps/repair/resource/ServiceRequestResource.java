@@ -44,6 +44,6 @@ public class ServiceRequestResource extends BaseResource implements IServiceRequ
     @RolesAllowed({"EMPLOYEE"})
     @Transactional
     public ServiceRequest update(ServiceRequest serviceRequest) {
-        return serviceRequestService.update(serviceRequest);
+        return serviceRequestService.update(serviceRequest, getUserAccount());
     }
 }

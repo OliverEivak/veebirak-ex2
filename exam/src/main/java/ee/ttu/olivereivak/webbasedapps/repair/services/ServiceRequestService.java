@@ -1,12 +1,15 @@
 package ee.ttu.olivereivak.webbasedapps.repair.services;
 
+import java.time.Instant;
 import java.util.List;
 
 import javax.inject.Inject;
 import javax.inject.Singleton;
 
 import ee.ttu.olivereivak.webbasedapps.repair.dao.ServiceRequestDAO;
+import ee.ttu.olivereivak.webbasedapps.repair.entity.UserAccount;
 import ee.ttu.olivereivak.webbasedapps.repair.entity.repairshop.ServiceRequest;
+import ee.ttu.olivereivak.webbasedapps.repair.entity.repairshop.ServiceRequestStatusType;
 
 @Singleton
 public class ServiceRequestService {
@@ -22,7 +25,17 @@ public class ServiceRequestService {
         return serviceRequestDAO.findByID(id);
     }
 
-    public ServiceRequest update(ServiceRequest serviceRequest) {
+    public ServiceRequest update(ServiceRequest serviceRequest, UserAccount userAccount) {
+        if (serviceRequest.getId() == null) {
+            ServiceRequestStatusType status = new ServiceRequestStatusType();
+            status.setId(1L); // status = registered
+
+            serviceRequest.setServiceRequestStatusType(status);
+        }
+
+        serviceRequest.setCreator(userAccount.getEmployee());
+        serviceRequest.setCreated(Instant.now());
+
         return serviceRequestDAO.update(serviceRequest);
     }
 
