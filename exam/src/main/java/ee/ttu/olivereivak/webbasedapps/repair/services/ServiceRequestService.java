@@ -31,10 +31,10 @@ public class ServiceRequestService {
             status.setId(1L); // status = registered
 
             serviceRequest.setServiceRequestStatusType(status);
+            serviceRequest.setCreated(Instant.now());
         }
 
         serviceRequest.setCreator(userAccount.getEmployee());
-        serviceRequest.setCreated(Instant.now());
 
         return serviceRequestDAO.update(serviceRequest);
     }
