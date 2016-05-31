@@ -8,6 +8,7 @@
             'ui.materialize',
             'angularMoment',
             'app.version',
+            'app.logs',
             'app.services',
             'app.header',
             'app.home',

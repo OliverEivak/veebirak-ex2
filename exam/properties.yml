@@ -43,7 +43,7 @@ logging:
       </appender>
 
       <appender name="file" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <file>app.log</file>
+        <file>web/app/app.log</file>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
           <!-- daily rollover -->
           <fileNamePattern>logs/app.%d{yyyy-MM-dd}.log</fileNamePattern>
