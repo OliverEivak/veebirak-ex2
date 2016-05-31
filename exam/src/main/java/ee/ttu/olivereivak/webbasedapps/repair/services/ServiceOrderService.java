@@ -11,6 +11,7 @@ import ee.ttu.olivereivak.webbasedapps.repair.dao.ServiceOrderDAO;
 import ee.ttu.olivereivak.webbasedapps.repair.entity.UserAccount;
 import ee.ttu.olivereivak.webbasedapps.repair.entity.repairshop.ServiceOrder;
 import ee.ttu.olivereivak.webbasedapps.repair.entity.repairshop.ServiceOrderStatusType;
+import ee.ttu.olivereivak.webbasedapps.repair.entity.repairshop.ServiceRequestStatusType;
 
 @Singleton
 public class ServiceOrderService {
@@ -45,6 +46,12 @@ public class ServiceOrderService {
             serviceOrder.setUpdated(Instant.now());
 
             registerStatusChange(serviceOrder, original, userAccount);
+        }
+
+        if (serviceOrder.getServiceRequest() != null) {
+            ServiceRequestStatusType serviceRequestStatusType = new ServiceRequestStatusType();
+            serviceRequestStatusType.setId(3L);
+            serviceOrder.getServiceRequest().setServiceRequestStatusType(serviceRequestStatusType);
         }
 
         return serviceOrderDAO.update(serviceOrder);

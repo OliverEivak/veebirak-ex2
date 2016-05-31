@@ -135,3 +135,12 @@ div[data-ng-messages].ng-inactive {
 button[name="button-create-device"] {
   margin-right: 20px;
 }
+
+td.with-input {
+  padding-top: 0;
+  padding-bottom: 0;
+
+  div[input-field] {
+    margin: 0;
+  }
+}

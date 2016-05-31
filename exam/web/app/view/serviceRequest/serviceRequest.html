@@ -18,7 +18,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr data-ng-repeat="serviceRequest in data.serviceRequests">
+                            <tr data-ng-repeat="serviceRequest in data.serviceRequests | orderBy:'id'">
                                 <td>{{serviceRequest.id}}</td>
                                 <td>{{serviceRequest.customer.subject.name}}</td>
                                 <td>{{serviceRequest.descriptionByCustomer}}</td>

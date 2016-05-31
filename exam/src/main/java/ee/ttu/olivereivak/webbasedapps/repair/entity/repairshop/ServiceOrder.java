@@ -39,7 +39,7 @@ public class ServiceOrder {
     @JoinColumn(name = "so_status_type_fk")
     private ServiceOrderStatusType serviceOrderStatusType;
 
-    @ManyToOne
+    @ManyToOne(cascade = { MERGE, PERSIST })
     @JoinColumn(name = "service_request_fk")
     private ServiceRequest serviceRequest;
 

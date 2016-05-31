@@ -10,7 +10,8 @@ angular.module('app.services', [
     'app.services.customerService',
     'app.services.serviceOrderService',
     'app.services.deviceService',
-    'app.services.deviceTypeService'
+    'app.services.deviceTypeService',
+    'app.services.serviceDeviceStatusTypeService'
 ])
 
     .value('services', '0.1');

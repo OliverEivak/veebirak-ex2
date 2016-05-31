@@ -12,6 +12,7 @@ angular.module('app.createDeviceModal', [])
                 controller: function ($scope) {
 
                     $scope.data = {};
+                    $scope.device = {};
 
                     init();
 
@@ -24,14 +25,27 @@ angular.module('app.createDeviceModal', [])
                         });
                     }
 
-                    $scope.choose = function(device) {
-                        $scope.deviceSelectCallback(device);
-                        $("#create-device-modal-close").click();
-                    };
-
-                    // TODO: save
                     $scope.save = function() {
-                        console.log('saving');
+                        if ($scope.data.form.$valid) {
+                            console.log('saving');
+
+                            var device = angular.copy($scope.device);
+
+                            // Replace with actual deviceType object.
+                            // (option value can only have a string and we need optgroups so can't use ng-options)
+                            for (var i = 0; i < $scope.data.deviceTypes.length; i++) {
+                                if ($scope.data.deviceTypes[i].id == device.deviceType) {
+                                    device.deviceType = $scope.data.deviceTypes[i];
+                                }
+                            }
+
+                            deviceService.update(device, function(createdDevice) {
+                                $scope.deviceSelectCallback(createdDevice);
+                                $("#create-device-modal-close").click();
+                            }, function() {
+                                console.error('Failed to save device');
+                            });
+                        }
                     };
 
                     function groupDeviceTypes() {

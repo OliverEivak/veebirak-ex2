@@ -27,10 +27,12 @@ public class ServiceRequestService {
 
     public ServiceRequest update(ServiceRequest serviceRequest, UserAccount userAccount) {
         if (serviceRequest.getId() == null) {
-            ServiceRequestStatusType status = new ServiceRequestStatusType();
-            status.setId(1L); // status = registered
+            if (serviceRequest.getServiceRequestStatusType() == null) {
+                ServiceRequestStatusType status = new ServiceRequestStatusType();
+                status.setId(1L); // status = registered
 
-            serviceRequest.setServiceRequestStatusType(status);
+                serviceRequest.setServiceRequestStatusType(status);
+            }
 
             serviceRequest.setCreator(userAccount.getEmployee());
             serviceRequest.setCreated(Instant.now());

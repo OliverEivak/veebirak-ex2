@@ -35,7 +35,7 @@
                                         data-ng-href='#findDeviceModal' data-modal>Find device</button>
                                 <button class="btn waves-effect waves-light right" name="button-create-device"
                                         data-ng-href='#createDeviceModal' data-modal>Create device</button>
-                                <h5>Devices</h5>
+                                <h5>Service devices</h5>
                                 <table>
                                     <thead>
                                     <tr>
@@ -44,18 +44,39 @@
                                         <th data-field="model">Model</th>
                                         <th data-field="type">Type</th>
                                         <th data-field="status">Status</th>
+                                        <th data-field="to-store">To store</th>
+                                        <th data-field="from-store">From store</th>
                                         <th data-field="actions"></th>
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    <tr data-ng-repeat="serviceDevice in serviceOrder.serviceDevices">
+                                    <tr data-ng-repeat="serviceDevice in serviceOrder.serviceDevices | orderBy:'id'">
                                         <td>{{serviceDevice.device.id}}</td>
                                         <td>{{serviceDevice.device.name}}</td>
                                         <td>{{serviceDevice.device.model}}</td>
                                         <td>{{serviceDevice.device.deviceType.name}}</td>
-                                        <td>{{serviceDevice.serviceDeviceStatusType.name}}</td>
+                                        <td class="with-input">
+                                            <div input-field>
+                                                <select material-select watch id="service-device-status" name="serviceDeviceStatus"
+                                                        data-ng-model="serviceDevice.serviceDeviceStatusType"
+                                                        data-ng-options="status as status.name for status in data.serviceDeviceStatusTypes track by status.id">
+                                                </select>
+                                            </div>
+                                        <td class="with-input">
+                                            <div input-field>
+                                                <input id="so-device-to-store" type="text" name="serviceDeviceToStore" data-ng-model="serviceDevice.toStore">
+                                            </div>
+                                        </td>
+                                        <td class="with-input">
+                                            <div input-field>
+                                                <input id="so-device-from-store" type="text" name="serviceDeviceFromStore" data-ng-model="serviceDevice.fromStore">
+                                            </div>
+                                        </td>
                                         <td>
-                                            <a href="" data-ng-click="remove($index)" class="waves-effect waves-light btn right">Remove</a>
+                                            <a href="" data-tooltipped data-ng-click="remove($index)" class="right"
+                                               data-position="bottom" data-delay="200" data-tooltip="Remove from service order">
+                                                <i class="material-icons">clear</i>
+                                            </a>
                                         </td>
                                     </tr>
                                     </tbody>

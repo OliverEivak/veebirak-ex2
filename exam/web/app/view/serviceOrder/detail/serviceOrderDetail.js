@@ -12,11 +12,15 @@ angular.module('app.serviceOrderDetail', ['ngRoute'])
         $routeProvider.when('/serviceOrders/:serviceOrderID', serviceOrderDetail);
     }])
 
-    .controller('ServiceOrderDetailCtrl', ['$scope', '$location', 'serviceOrderService', '$routeParams',
-        function ($scope, $location, serviceOrderService, $routeParams) {
+    .controller('ServiceOrderDetailCtrl', ['$scope', '$location', 'serviceOrderService', '$routeParams', 'serviceDeviceStatusTypeService',
+        'serviceRequestService',
+        function ($scope, $location, serviceOrderService, $routeParams, serviceDeviceStatusTypeService,
+                  serviceRequestService) {
 
             $scope.data = {};
-            $scope.serviceOrder = {};
+            $scope.serviceOrder = {
+                serviceDevices: []
+            };
 
             init();
 
@@ -34,8 +38,19 @@ angular.module('app.serviceOrderDetail', ['ngRoute'])
                     $scope.serviceOrder.serviceRequest = {
                         id: searchObject.serviceRequest
                     };
-                    // TODO: get actual serviceRequest object?
+
+                    serviceRequestService.get(searchObject.serviceRequest, function(serviceRequest) {
+                        $scope.serviceOrder.serviceRequest = serviceRequest;
+                    }, function() {
+                        console.error('Failed to get ServiceRequest');
+                    });
                 }
+
+                serviceDeviceStatusTypeService.getAll(function(types) {
+                    $scope.data.serviceDeviceStatusTypes = types;
+                }, function() {
+                    console.error('Failed to get ServiceDeviceStatusTypes')
+                });
             }
 
             $scope.save = function() {
