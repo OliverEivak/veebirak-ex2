@@ -10,6 +10,7 @@ import com.google.inject.Inject;
 import com.google.inject.persist.Transactional;
 
 import ee.ttu.olivereivak.webbasedapps.repair.entity.Authentication;
+import ee.ttu.olivereivak.webbasedapps.repair.resource.api.ILoginResource;
 import ee.ttu.olivereivak.webbasedapps.repair.services.LoginService;
 
 @Path("/login")

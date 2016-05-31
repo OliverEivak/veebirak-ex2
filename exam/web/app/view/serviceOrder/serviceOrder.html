@@ -11,6 +11,7 @@
                                 <th data-field="id">ID</th>
                                 <th data-field="name">Customer</th>
                                 <th data-field="note">Note</th>
+                                <th data-field="totalPrice">Price</th>
                                 <th data-field="status">Status</th>
                                 <th data-field="actions"></th>
                             </tr>
@@ -20,6 +21,7 @@
                                 <td>{{serviceOrder.id}}</td>
                                 <td>{{serviceOrder.serviceRequest.customer.subject.name}}</td>
                                 <td>{{serviceOrder.note}}</td>
+                                <td>{{serviceOrder.totalPrice || 0}}</td>
                                 <td>{{serviceOrder.serviceOrderStatusType.name}}</td>
                                 <td>
                                     <a data-ng-href="/serviceOrders/{{serviceOrder.id}}" class="waves-effect waves-light btn right">Open</a>

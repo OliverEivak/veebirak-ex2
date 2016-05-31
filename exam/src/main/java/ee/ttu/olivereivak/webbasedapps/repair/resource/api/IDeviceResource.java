@@ -1,4 +1,4 @@
-package ee.ttu.olivereivak.webbasedapps.repair.resource;
+package ee.ttu.olivereivak.webbasedapps.repair.resource.api;
 
 import java.util.List;
 

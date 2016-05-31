@@ -7,6 +7,7 @@ import static org.junit.Assert.assertNull;
 import org.junit.Test;
 
 import ee.ttu.olivereivak.webbasedapps.repair.entity.Authentication;
+import ee.ttu.olivereivak.webbasedapps.repair.resource.api.ILoginResource;
 import ee.ttu.olivereivak.webbasedapps.repair.test.TestBase;
 
 public class LoginResourceTest extends TestBase {

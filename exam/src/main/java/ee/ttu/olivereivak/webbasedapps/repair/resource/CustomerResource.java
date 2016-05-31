@@ -14,6 +14,7 @@ import com.google.inject.Inject;
 import com.google.inject.persist.Transactional;
 
 import ee.ttu.olivereivak.webbasedapps.repair.entity.subject.Customer;
+import ee.ttu.olivereivak.webbasedapps.repair.resource.api.ICustomerResource;
 import ee.ttu.olivereivak.webbasedapps.repair.services.CustomerService;
 
 @Path("/customers")

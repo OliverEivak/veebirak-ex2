@@ -8,6 +8,7 @@ import javax.ws.rs.ClientErrorException;
 import org.junit.Test;
 
 import ee.ttu.olivereivak.webbasedapps.repair.entity.Authentication;
+import ee.ttu.olivereivak.webbasedapps.repair.resource.api.ILogoutResource;
 import ee.ttu.olivereivak.webbasedapps.repair.test.IntegrationTestBase;
 
 public class LogoutResourceITest extends IntegrationTestBase<ILogoutResource> {

@@ -19,8 +19,8 @@ import lombok.extern.slf4j.Slf4j;
 
 import ee.ttu.olivereivak.webbasedapps.repair.entity.Authentication;
 import ee.ttu.olivereivak.webbasedapps.repair.guice.module.RestModule;
-import ee.ttu.olivereivak.webbasedapps.repair.resource.ILoginResource;
-import ee.ttu.olivereivak.webbasedapps.repair.resource.ILogoutResource;
+import ee.ttu.olivereivak.webbasedapps.repair.resource.api.ILoginResource;
+import ee.ttu.olivereivak.webbasedapps.repair.resource.api.ILogoutResource;
 import ee.ttu.olivereivak.webbasedapps.repair.resource.filter.AuthHeadersRequestFilter;
 
 /**

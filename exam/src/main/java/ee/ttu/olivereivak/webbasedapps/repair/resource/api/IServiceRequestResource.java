@@ -1,4 +1,4 @@
-package ee.ttu.olivereivak.webbasedapps.repair.resource;
+package ee.ttu.olivereivak.webbasedapps.repair.resource.api;
 
 import java.util.List;
 
@@ -11,24 +11,24 @@ import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
-import ee.ttu.olivereivak.webbasedapps.repair.entity.repairshop.ServiceOrder;
+import ee.ttu.olivereivak.webbasedapps.repair.entity.repairshop.ServiceRequest;
 
-@Path("/serviceOrders")
+@Path("/serviceRequests")
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
-public interface IServiceOrderResource {
+public interface IServiceRequestResource {
 
     @GET
     @RolesAllowed({"EMPLOYEE"})
-    List<ServiceOrder> getAll();
+    List<ServiceRequest> getAll();
 
     @GET
-    @Path("{serviceOrderID}")
+    @Path("{serviceRequestID}")
     @RolesAllowed({"EMPLOYEE"})
-    ServiceOrder get(@PathParam("serviceOrderID") Long serviceOrderID);
+    ServiceRequest get(@PathParam("serviceRequestID") Long serviceRequestID);
 
     @POST
     @RolesAllowed({"EMPLOYEE"})
-    ServiceOrder update(ServiceOrder serviceOrder);
+    ServiceRequest update(ServiceRequest serviceRequest);
 
 }

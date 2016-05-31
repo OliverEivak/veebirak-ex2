@@ -96,7 +96,7 @@
                                         <th data-field="serviceDevice">Service device</th>
                                         <th data-field="count">Count</th>
                                         <th data-field="price">Price</th>
-                                        <th data-field="price">Total</th>
+                                        <th data-field="total">Total</th>
                                         <th data-field="actions"></th>
                                     </tr>
                                     </thead>
@@ -126,7 +126,6 @@
                                             <div input-field>
                                                 <input type="number" name="servicePartCount{{$index}}" data-ng-model="servicePart.count"
                                                        data-ng-max="getMaxPartCount(servicePart)">
-
                                                 <div data-ng-messages="data.form['servicePartCount' + $index].$error">
                                                     <div data-ng-message="max">Part count is too big</div>
                                                 </div>
@@ -155,6 +154,96 @@
                                         <td></td>
                                         <td>
                                             <a href="" data-tooltipped data-ng-click="addServicePartRow()" class="right"
+                                               data-position="bottom" data-delay="200" data-tooltip="Add row">
+                                                <i class="material-icons">add</i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col s12">
+                                <h5>Service actions</h5>
+                                <table>
+                                    <thead>
+                                    <tr>
+                                        <th data-field="id">ID</th>
+                                        <th data-field="description">Description</th>
+                                        <th data-field="serviceType">Service type</th>
+                                        <th data-field="serviceDevice">Service device</th>
+                                        <th data-field="status">Status</th>
+                                        <th data-field="amount">Amount</th>
+                                        <th data-field="price">Price</th>
+                                        <th data-field="total">Total</th>
+                                        <th data-field="actions"></th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr data-ng-repeat="serviceAction in serviceOrder.serviceActions | orderBy:'id'">
+                                        <td>{{serviceAction.id}}</td>
+                                        <td class="with-input">
+                                            <div input-field>
+                                                <input type="text" name="serviceActionDescription" data-ng-model="serviceAction.description">
+                                            </div>
+                                        </td>
+                                        <td class="with-input">
+                                            <div input-field>
+                                                <select material-select watch id="service-action-service-type" name="serviceActionServiceType"
+                                                        data-ng-model="serviceAction.serviceType"
+                                                        data-ng-options="serviceType as serviceType.name for serviceType in data.serviceTypes track by serviceType.id">
+                                                    <option value=""></option>
+                                                </select>
+                                            </div>
+                                        </td>
+                                        <td class="with-input">
+                                            <div input-field>
+                                                <select material-select watch id="service-action-service-device" name="serviceActionServiceDevice"
+                                                        data-ng-model="serviceAction.serviceDevice"
+                                                        data-ng-options="serviceDevice as serviceDevice.device.name for serviceDevice in serviceOrder.serviceDevices track by serviceDevice.id">
+                                                    <option value=""></option>
+                                                </select>
+                                            </div>
+                                        </td>
+                                        <td class="with-input">
+                                            <div input-field>
+                                                <select material-select watch id="service-action-status" name="serviceActionStatus"
+                                                        data-ng-model="serviceAction.serviceActionStatusType"
+                                                        data-ng-options="status as status.name for status in data.serviceActionStatusTypes track by status.id">
+                                                </select>
+                                            </div>
+                                        </td>
+                                        <td class="with-input">
+                                            <div input-field>
+                                                <input type="number" name="serviceActionAmount" data-ng-model="serviceAction.amount"
+                                                       data-tooltipped data-delay="200" data-tooltip="{{serviceAction.serviceType.serviceUnitType.name}}">
+                                            </div>
+                                        </td>
+                                        <td class="with-input">
+                                            <div input-field>
+                                                <input type="number" name="serviceActionPrice" data-ng-model="serviceAction.price">
+                                            </div>
+                                        </td>
+                                        <td>{{serviceAction.amount * serviceAction.price}}</td>
+                                        <td>
+                                            <a href="" data-tooltipped data-ng-click="removeServiceAction(serviceAction)" class="right"
+                                               data-position="bottom" data-delay="200" data-tooltip="Remove">
+                                                <i class="material-icons">clear</i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>
+                                            <a href="" data-tooltipped data-ng-click="addServiceActionRow()" class="right"
                                                data-position="bottom" data-delay="200" data-tooltip="Add row">
                                                 <i class="material-icons">add</i>
                                             </a>

@@ -10,6 +10,7 @@ import javax.ws.rs.core.MediaType;
 import com.google.inject.Inject;
 import com.google.inject.persist.Transactional;
 
+import ee.ttu.olivereivak.webbasedapps.repair.resource.api.ILogoutResource;
 import ee.ttu.olivereivak.webbasedapps.repair.services.LogoutService;
 
 @Path("/logout")

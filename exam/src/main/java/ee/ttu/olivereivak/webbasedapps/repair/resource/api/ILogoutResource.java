@@ -1,4 +1,4 @@
-package ee.ttu.olivereivak.webbasedapps.repair.resource;
+package ee.ttu.olivereivak.webbasedapps.repair.resource.api;
 
 import javax.annotation.security.RolesAllowed;
 import javax.ws.rs.Consumes;

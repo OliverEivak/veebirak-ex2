@@ -17,6 +17,7 @@ import com.google.inject.persist.Transactional;
 
 import ee.ttu.olivereivak.webbasedapps.repair.entity.repairshop.Device;
 import ee.ttu.olivereivak.webbasedapps.repair.entity.search.DeviceSearchQuery;
+import ee.ttu.olivereivak.webbasedapps.repair.resource.api.IDeviceResource;
 import ee.ttu.olivereivak.webbasedapps.repair.services.DeviceService;
 
 @Path("/devices")

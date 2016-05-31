@@ -13,15 +13,16 @@ angular.module('app.serviceOrderDetail', ['ngRoute'])
     }])
 
     .controller('ServiceOrderDetailCtrl', ['$scope', '$location', 'serviceOrderService', '$routeParams', 'serviceDeviceStatusTypeService',
-        'serviceRequestService',
+        'serviceRequestService', 'serviceTypeService', 'serviceActionStatusTypeService',
         function ($scope, $location, serviceOrderService, $routeParams, serviceDeviceStatusTypeService,
-                  serviceRequestService) {
+                  serviceRequestService, serviceTypeService, serviceActionStatusTypeService) {
 
             $scope.data = {};
 
             $scope.serviceOrder = {
                 serviceDevices: [],
-                serviceParts: []
+                serviceParts: [],
+                serviceActions: []
             };
 
             init();
@@ -30,6 +31,8 @@ angular.module('app.serviceOrderDetail', ['ngRoute'])
                 getServiceOrder();
                 getServiceRequest();
                 getServiceDeviceStatusTypes();
+                getServiceTypes();
+                getServiceActionStatusTypes();
             }
 
             function getServiceOrder() {
@@ -65,6 +68,22 @@ angular.module('app.serviceOrderDetail', ['ngRoute'])
                 });
             }
 
+            function getServiceTypes() {
+                serviceTypeService.getAll(function(types) {
+                    $scope.data.serviceTypes = types;
+                }, function() {
+                    console.error('Failed to get ServiceTypes')
+                });
+            }
+
+            function getServiceActionStatusTypes() {
+                serviceActionStatusTypeService.getAll(function(types) {
+                    $scope.data.serviceActionStatusTypes = types;
+                }, function() {
+                    console.error('Failed to get ServiceActionStatusTypes')
+                });
+            }
+
             $scope.save = function() {
                 if ($scope.data.form.$valid) {
                     serviceOrderService.update($scope.serviceOrder, function() {
@@ -95,9 +114,20 @@ angular.module('app.serviceOrderDetail', ['ngRoute'])
                 $scope.serviceOrder.serviceParts.splice($scope.serviceOrder.serviceParts.indexOf(servicePart), 1);
             };
 
+            $scope.removeServiceAction = function(serviceAction) {
+                $scope.serviceOrder.serviceActions.splice($scope.serviceOrder.serviceActions.indexOf(serviceAction), 1);
+            };
+
             $scope.addServicePartRow = function() {
                 $scope.serviceOrder.serviceParts.push({
                     count: 1,
+                    price: 0
+                });
+            };
+
+            $scope.addServiceActionRow = function() {
+                $scope.serviceOrder.serviceActions.push({
+                    amount: 1,
                     price: 0
                 });
             };

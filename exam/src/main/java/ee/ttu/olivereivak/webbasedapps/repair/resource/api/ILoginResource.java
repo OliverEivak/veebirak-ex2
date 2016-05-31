@@ -1,4 +1,4 @@
-package ee.ttu.olivereivak.webbasedapps.repair.resource;
+package ee.ttu.olivereivak.webbasedapps.repair.resource.api;
 
 import javax.ws.rs.Consumes;
 import javax.ws.rs.POST;

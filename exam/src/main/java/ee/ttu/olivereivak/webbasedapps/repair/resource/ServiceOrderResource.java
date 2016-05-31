@@ -15,6 +15,7 @@ import com.google.inject.Inject;
 import com.google.inject.persist.Transactional;
 
 import ee.ttu.olivereivak.webbasedapps.repair.entity.repairshop.ServiceOrder;
+import ee.ttu.olivereivak.webbasedapps.repair.resource.api.IServiceOrderResource;
 import ee.ttu.olivereivak.webbasedapps.repair.services.ServiceOrderService;
 
 @Path("/serviceOrders")

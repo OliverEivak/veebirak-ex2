@@ -1,5 +1,6 @@
 package ee.ttu.olivereivak.webbasedapps.repair.services;
 
+import java.math.BigDecimal;
 import java.time.Instant;
 import java.util.List;
 import java.util.Objects;
@@ -7,8 +8,12 @@ import java.util.Objects;
 import javax.inject.Inject;
 import javax.inject.Singleton;
 
+import ee.ttu.olivereivak.webbasedapps.repair.dao.ServiceActionDAO;
+import ee.ttu.olivereivak.webbasedapps.repair.dao.ServiceDeviceDAO;
 import ee.ttu.olivereivak.webbasedapps.repair.dao.ServiceOrderDAO;
 import ee.ttu.olivereivak.webbasedapps.repair.entity.UserAccount;
+import ee.ttu.olivereivak.webbasedapps.repair.entity.repairshop.ServiceAction;
+import ee.ttu.olivereivak.webbasedapps.repair.entity.repairshop.ServiceDevice;
 import ee.ttu.olivereivak.webbasedapps.repair.entity.repairshop.ServiceOrder;
 import ee.ttu.olivereivak.webbasedapps.repair.entity.repairshop.ServiceOrderStatusType;
 import ee.ttu.olivereivak.webbasedapps.repair.entity.repairshop.ServicePart;
@@ -19,6 +24,12 @@ public class ServiceOrderService {
 
     @Inject
     private ServiceOrderDAO serviceOrderDAO;
+
+    @Inject
+    private ServiceActionDAO serviceActionDAO;
+
+    @Inject
+    private ServiceDeviceDAO serviceDeviceDAO;
 
     public List<ServiceOrder> getAll() {
         return serviceOrderDAO.findAll();
@@ -49,15 +60,23 @@ public class ServiceOrderService {
             registerStatusChange(serviceOrder, original, userAccount);
         }
 
+        updateServiceRequestStatus(serviceOrder);
+
+        registerServicePartCreation(serviceOrder, userAccount);
+        registerServiceActionCreation(serviceOrder, userAccount);
+        registerServiceDeviceStatusChange(serviceOrder);
+
+        calculateTotalPrice(serviceOrder);
+
+        return serviceOrderDAO.update(serviceOrder);
+    }
+
+    private void updateServiceRequestStatus(ServiceOrder serviceOrder) {
         if (serviceOrder.getServiceRequest() != null) {
             ServiceRequestStatusType serviceRequestStatusType = new ServiceRequestStatusType();
             serviceRequestStatusType.setId(3L);
             serviceOrder.getServiceRequest().setServiceRequestStatusType(serviceRequestStatusType);
         }
-
-        registerServicePartCreation(serviceOrder, userAccount);
-
-        return serviceOrderDAO.update(serviceOrder);
     }
 
     private void registerStatusChange(ServiceOrder serviceOrder, ServiceOrder original, UserAccount userAccount) {
@@ -86,6 +105,68 @@ public class ServiceOrderService {
                     servicePart.setCreator(userAccount.getEmployee());
                 }
             }
+        }
+    }
+
+    private void registerServiceActionCreation(ServiceOrder serviceOrder, UserAccount userAccount) {
+        if (serviceOrder.getServiceActions() != null) {
+            for (ServiceAction serviceAction : serviceOrder.getServiceActions()) {
+                if (serviceAction.getId() == null) {
+                    serviceAction.setCreated(Instant.now());
+                    serviceAction.setCreator(userAccount.getEmployee());
+                } else {
+                    registerPriceChange(serviceAction);
+                }
+            }
+        }
+    }
+
+    private void registerPriceChange(ServiceAction serviceAction) {
+        ServiceAction originalServiceAction = serviceActionDAO.findByID(serviceAction.getId());
+
+        BigDecimal oldPrice = null;
+
+        if (originalServiceAction != null) {
+            oldPrice = originalServiceAction.getPrice();
+        }
+
+        if (!Objects.equals(oldPrice, serviceAction.getPrice())) {
+            serviceAction.setPriceChanged(Instant.now());
+        }
+    }
+
+    private void registerServiceDeviceStatusChange(ServiceOrder serviceOrder) {
+        if (serviceOrder.getServiceDevices() != null) {
+            for (ServiceDevice serviceDevice : serviceOrder.getServiceDevices()) {
+                ServiceDevice originalServiceDevice = serviceDeviceDAO.findByID(serviceDevice.getId());
+
+                Long oldStatus = null;
+                Long newStatus = null;
+
+                if (originalServiceDevice.getServiceDeviceStatusType() != null) {
+                    oldStatus = originalServiceDevice.getServiceDeviceStatusType().getId();
+                }
+
+                if (serviceDevice.getServiceDeviceStatusType() != null) {
+                    newStatus = serviceDevice.getServiceDeviceStatusType().getId();
+                }
+
+                if (!Objects.equals(oldStatus, newStatus)) {
+                    serviceDevice.setStatusChanged(Instant.now());
+                }
+            }
+        }
+    }
+
+    private void calculateTotalPrice(ServiceOrder serviceOrder) {
+        serviceOrder.setTotalPrice(BigDecimal.ZERO);
+
+        for (ServiceAction serviceAction : serviceOrder.getServiceActions()) {
+            serviceOrder.setTotalPrice(serviceOrder.getTotalPrice().add(serviceAction.getAmount().multiply(serviceAction.getPrice())));
+        }
+
+        for (ServicePart servicePart : serviceOrder.getServiceParts()) {
+            serviceOrder.setTotalPrice(serviceOrder.getTotalPrice().add(BigDecimal.valueOf(servicePart.getCount()).multiply(servicePart.getPrice())));
         }
     }
 

@@ -11,7 +11,9 @@ angular.module('app.services', [
     'app.services.serviceOrderService',
     'app.services.deviceService',
     'app.services.deviceTypeService',
-    'app.services.serviceDeviceStatusTypeService'
+    'app.services.serviceDeviceStatusTypeService',
+    'app.services.serviceTypeService',
+    'app.services.serviceActionStatusTypeService'
 ])
 
     .value('services', '0.1');
