@@ -72,4 +72,8 @@ public class ServiceOrder {
     @JoinColumn(name = "service_order_fk")
     private List<ServiceDevice> serviceDevices;
 
+    @OneToMany(fetch = EAGER, cascade = { MERGE, PERSIST })
+    @JoinColumn(name = "service_order_fk")
+    private List<ServicePart> serviceParts;
+
 }

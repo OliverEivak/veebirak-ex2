@@ -29,9 +29,9 @@ public class ServicePart {
     @Column(name = "service_part")
     private Long id;
 
-    @ManyToOne
-    @JoinColumn(name = "service_order_fk")
-    private ServiceOrder serviceOrder;
+//    @ManyToOne
+//    @JoinColumn(name = "service_order_fk")
+//    private ServiceOrder serviceOrder;
 
     @ManyToOne
     @JoinColumn(name = "service_device_fk")

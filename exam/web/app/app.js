@@ -29,4 +29,8 @@
             $locationProvider.html5Mode(true);
         }])
 
+        .config(['$compileProvider', function ($compileProvider) {
+            $compileProvider.debugInfoEnabled(false);
+        }])
+
 })(angular);

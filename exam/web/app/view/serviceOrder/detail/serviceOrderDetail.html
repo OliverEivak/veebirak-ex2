@@ -62,6 +62,7 @@
                                                         data-ng-options="status as status.name for status in data.serviceDeviceStatusTypes track by status.id">
                                                 </select>
                                             </div>
+                                        </td>
                                         <td class="with-input">
                                             <div input-field>
                                                 <input id="so-device-to-store" type="text" name="serviceDeviceToStore" data-ng-model="serviceDevice.toStore">
@@ -73,9 +74,89 @@
                                             </div>
                                         </td>
                                         <td>
-                                            <a href="" data-tooltipped data-ng-click="remove($index)" class="right"
+                                            <a href="" data-tooltipped data-ng-click="remove(serviceDevice)" class="right"
                                                data-position="bottom" data-delay="200" data-tooltip="Remove from service order">
                                                 <i class="material-icons">clear</i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col s12">
+                                <h5>Service parts</h5>
+                                <table>
+                                    <thead>
+                                    <tr>
+                                        <th data-field="id">ID</th>
+                                        <th data-field="name">Name</th>
+                                        <th data-field="serialNumber">Serial no</th>
+                                        <th data-field="serviceDevice">Service device</th>
+                                        <th data-field="count">Count</th>
+                                        <th data-field="price">Price</th>
+                                        <th data-field="price">Total</th>
+                                        <th data-field="actions"></th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr data-ng-repeat="servicePart in serviceOrder.serviceParts | orderBy:'id'">
+                                        <td>{{servicePart.id}}</td>
+                                        <td class="with-input">
+                                            <div input-field>
+                                                <input type="text" name="servicePartName" data-ng-model="servicePart.name">
+                                            </div>
+                                        </td>
+                                        <td class="with-input">
+                                            <div input-field>
+                                                <input type="text" name="servicePartSerialNumber" data-ng-model="servicePart.serialNumber">
+                                            </div>
+                                        </td>
+                                        <td class="with-input">
+                                            <div input-field>
+                                                <select material-select watch id="service-part-service-device" name="servicePartServiceDevice"
+                                                        data-ng-model="servicePart.serviceDevice"
+                                                        data-ng-options="serviceDevice as serviceDevice.device.name for serviceDevice in serviceOrder.serviceDevices track by serviceDevice.id">
+                                                    <option value=""></option>
+                                                </select>
+                                            </div>
+                                        </td>
+                                        <td class="with-input">
+                                            <div input-field>
+                                                <input type="number" name="servicePartCount{{$index}}" data-ng-model="servicePart.count"
+                                                       data-ng-max="getMaxPartCount(servicePart)">
+
+                                                <div data-ng-messages="data.form['servicePartCount' + $index].$error">
+                                                    <div data-ng-message="max">Part count is too big</div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="with-input">
+                                            <div input-field>
+                                                <input type="number" name="servicePartPrice" data-ng-model="servicePart.price">
+                                            </div>
+                                        </td>
+                                        <td>{{servicePart.count * servicePart.price}}</td>
+                                        <td>
+                                            <a href="" data-tooltipped data-ng-click="removeServicePart(servicePart)" class="right"
+                                               data-position="bottom" data-delay="200" data-tooltip="Remove">
+                                                <i class="material-icons">clear</i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>
+                                            <a href="" data-tooltipped data-ng-click="addServicePartRow()" class="right"
+                                               data-position="bottom" data-delay="200" data-tooltip="Add row">
+                                                <i class="material-icons">add</i>
                                             </a>
                                         </td>
                                     </tr>
