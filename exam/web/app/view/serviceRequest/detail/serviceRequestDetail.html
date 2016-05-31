@@ -55,9 +55,17 @@
                                 <button class="btn waves-effect waves-light full-width" name="button-create-order"
                                         data-ng-click="createOrder()">Create order</button>
                             </div>
-                            <div input-field class="col s6 offset-s6">
+                            <div input-field class="col s6">
+                                <button class="btn waves-effect waves-light full-width" name="button-delete"
+                                        data-ng-click="delete()"
+                                        data-ng-disabled="!serviceRequest.serviceRequestStatusType || serviceRequest.serviceRequestStatusType.id === 3">
+                                    Delete</button>
+                            </div>
+                            <div input-field class="col s6">
                                 <button class="btn waves-effect waves-light full-width" name="button-reject"
-                                        data-ng-click="reject()">Reject</button>
+                                        data-ng-click="reject()"
+                                        data-ng-disabled="serviceRequest.serviceRequestStatusType && serviceRequest.serviceRequestStatusType.id !== 1">
+                                    Reject</button>
                             </div>
                         </div>
                     </form>

@@ -4,6 +4,7 @@ import java.util.List;
 
 import javax.annotation.security.RolesAllowed;
 import javax.ws.rs.Consumes;
+import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
@@ -30,5 +31,10 @@ public interface IServiceRequestResource {
     @POST
     @RolesAllowed({"EMPLOYEE"})
     ServiceRequest update(ServiceRequest serviceRequest);
+
+    @DELETE
+    @Path("{serviceRequestID}")
+    @RolesAllowed({"EMPLOYEE"})
+    void delete(@PathParam("serviceRequestID") Long serviceRequestID);
 
 }

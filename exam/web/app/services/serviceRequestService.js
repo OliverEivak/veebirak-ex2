@@ -33,6 +33,12 @@ angular.module('app.services.serviceRequestService', []).
                             errorCallback(response);
                         }
                     }, errorCallback);
+                },
+
+                delete: function(id, successCallback, errorCallback) {
+                    httpService.makeDelete('repair-api/serviceRequests/' + id, {}, function() {
+                        successCallback();
+                    }, errorCallback);
                 }
             };
 

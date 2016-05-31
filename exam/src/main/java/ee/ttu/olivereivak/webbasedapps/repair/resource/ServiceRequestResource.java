@@ -4,6 +4,7 @@ import java.util.List;
 
 import javax.annotation.security.RolesAllowed;
 import javax.ws.rs.Consumes;
+import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
@@ -46,5 +47,13 @@ public class ServiceRequestResource extends BaseResource implements IServiceRequ
     @Transactional
     public ServiceRequest update(ServiceRequest serviceRequest) {
         return serviceRequestService.update(serviceRequest, getUserAccount());
+    }
+
+    @DELETE
+    @Path("{serviceRequestID}")
+    @RolesAllowed({"EMPLOYEE"})
+    @Transactional
+    public void delete(@PathParam("serviceRequestID") Long serviceRequestID) {
+        serviceRequestService.delete(serviceRequestID);
     }
 }

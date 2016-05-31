@@ -52,4 +52,12 @@ angular.module('app.serviceRequestDetail', ['ngRoute'])
                 });
             };
 
+            $scope.delete = function() {
+                serviceRequestService.delete($scope.serviceRequest.id, function() {
+                    $location.url('/serviceRequests');
+                }, function() {
+                    console.error('Failed to delete ServiceRequest')
+                });
+            };
+
         }]);
