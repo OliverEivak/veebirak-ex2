@@ -9,17 +9,18 @@ import com.google.common.util.concurrent.Service;
 import com.google.inject.AbstractModule;
 import com.google.inject.Provides;
 
+import freemarker.template.Configuration;
 import lombok.extern.slf4j.Slf4j;
 
 import ee.ttu.olivereivak.webbasedapps.repair.config.ApplicationConfig;
+import ee.ttu.olivereivak.webbasedapps.repair.guice.provider.FreemarkerConfigProvider;
 import ee.ttu.olivereivak.webbasedapps.repair.guice.provider.ObjectMapperProvider;
 import ee.ttu.olivereivak.webbasedapps.repair.resource.BaseResource;
 import ee.ttu.olivereivak.webbasedapps.repair.util.ReflectionUtils;
 import ee.ttu.olivereivak.webbasedapps.repair.web.ApplicationWebServer;
 
 /**
- * <p>Among the duties of your application module(s), you must explicitly bind every JAXRS resource class.
- * Consider using Reflections to do this automatically.</p>
+ * <p>Among the duties of your application module(s), you must explicitly bind every JAXRS resource class. </p>
  *
  * <p>We must provide bindings for the LoggingConfig, WebConfig, and DatabaseConfig to use the
  * logging, rest, and hibernate modules.</p>
@@ -32,6 +33,7 @@ public class ApplicationModule extends AbstractModule {
 		bindServices();
 
 		bind(ObjectMapper.class).toProvider(ObjectMapperProvider.class);
+		bind(Configuration.class).toProvider(FreemarkerConfigProvider.class);
 
 		bind(WebServer.class).to(ApplicationWebServer.class);
 	}
