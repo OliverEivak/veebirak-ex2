@@ -11,6 +11,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
+import javax.validation.constraints.DecimalMin;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -45,9 +46,11 @@ public class ServiceAction {
 //    @JoinColumn(name = "service_order_fk")
 //    private ServiceOrder serviceOrder;
 
+    @DecimalMin("0")
     @Column(name = "service_amount")
     private BigDecimal amount;
 
+    @DecimalMin("0")
     private BigDecimal price;
 
     @Column(name = "price_updated")

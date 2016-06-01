@@ -11,6 +11,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
+import javax.validation.constraints.DecimalMin;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -43,9 +44,11 @@ public class ServicePart {
     @Column(name = "serial_no", columnDefinition = "text")
     private String serialNumber;
 
+    @DecimalMin("0")
     @Column(name = "part_count")
     private Long count;
 
+    @DecimalMin("0")
     @Column(name = "part_price")
     private BigDecimal price;
 

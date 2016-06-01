@@ -125,15 +125,20 @@
                                         <td class="with-input">
                                             <div input-field>
                                                 <input type="number" name="servicePartCount{{$index}}" data-ng-model="servicePart.count"
-                                                       data-ng-max="getMaxPartCount(servicePart)">
+                                                       data-ng-max="getMaxPartCount(servicePart)" min="0">
                                                 <div data-ng-messages="data.form['servicePartCount' + $index].$error">
                                                     <div data-ng-message="max">Part count is too big</div>
+                                                    <div data-ng-message="min">Part count can not be negative</div>
                                                 </div>
                                             </div>
                                         </td>
                                         <td class="with-input">
                                             <div input-field>
-                                                <input type="number" name="servicePartPrice" data-ng-model="servicePart.price">
+                                                <input type="number" name="servicePartPrice{{$index}}" data-ng-model="servicePart.price"
+                                                       min="0">
+                                            </div>
+                                            <div data-ng-messages="data.form['servicePartPrice' + $index].$error">
+                                                <div data-ng-message="min">Price can not be negative</div>
                                             </div>
                                         </td>
                                         <td>{{servicePart.count * servicePart.price}}</td>
@@ -192,7 +197,8 @@
                                             <div input-field>
                                                 <select material-select watch id="service-action-service-type" name="serviceActionServiceType"
                                                         data-ng-model="serviceAction.serviceType"
-                                                        data-ng-options="serviceType as serviceType.name for serviceType in data.serviceTypes track by serviceType.id">
+                                                        data-ng-options="serviceType as serviceType.name for serviceType in data.serviceTypes track by serviceType.id"
+                                                        data-ng-change="serviceAction.price = serviceAction.serviceType.price">
                                                     <option value=""></option>
                                                 </select>
                                             </div>
@@ -216,13 +222,21 @@
                                         </td>
                                         <td class="with-input">
                                             <div input-field>
-                                                <input type="number" name="serviceActionAmount" data-ng-model="serviceAction.amount"
-                                                       data-tooltipped data-delay="200" data-tooltip="{{serviceAction.serviceType.serviceUnitType.name}}">
+                                                <input type="number" name="serviceActionAmount{{$index}}" data-ng-model="serviceAction.amount"
+                                                       data-tooltipped data-delay="200" data-tooltip="{{serviceAction.serviceType.serviceUnitType.name}}"
+                                                       min="0">
+                                                <div data-ng-messages="data.form['serviceActionAmount' + $index].$error">
+                                                    <div data-ng-message="min">Amount can not be negative</div>
+                                                </div>
                                             </div>
                                         </td>
                                         <td class="with-input">
                                             <div input-field>
-                                                <input type="number" name="serviceActionPrice" data-ng-model="serviceAction.price">
+                                                <input type="number" name="serviceActionPrice{{$index}}" data-ng-model="serviceAction.price"
+                                                       min="0">
+                                                <div data-ng-messages="data.form['serviceActionPrice' + $index].$error">
+                                                    <div data-ng-message="min">Price can not be negative</div>
+                                                </div>
                                             </div>
                                         </td>
                                         <td>{{serviceAction.amount * serviceAction.price}}</td>

@@ -64,7 +64,7 @@ public class AuthenticationJdbcDAO {
         try {
             Class.forName(driver).newInstance();
         } catch (Exception e) {
-            log.error("Error registering mysql connector", e);
+            log.error("Error registering connector", e);
         }
     }
 
