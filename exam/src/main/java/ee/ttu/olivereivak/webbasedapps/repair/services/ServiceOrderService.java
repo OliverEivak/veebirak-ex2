@@ -83,7 +83,7 @@ public class ServiceOrderService {
         Long oldStatus = null;
         Long newStatus = null;
 
-        if (original.getServiceOrderStatusType() != null) {
+        if (original != null && original.getServiceOrderStatusType() != null) {
             oldStatus = original.getServiceOrderStatusType().getId();
         }
 
@@ -143,7 +143,7 @@ public class ServiceOrderService {
                 Long oldStatus = null;
                 Long newStatus = null;
 
-                if (originalServiceDevice.getServiceDeviceStatusType() != null) {
+                if (originalServiceDevice != null && originalServiceDevice.getServiceDeviceStatusType() != null) {
                     oldStatus = originalServiceDevice.getServiceDeviceStatusType().getId();
                 }
 
