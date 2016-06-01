@@ -12,3 +12,10 @@ CREATE TABLE authentication (
   CONSTRAINT id_pk PRIMARY KEY (id),
   CONSTRAINT token_uq UNIQUE (token)
 );
+
+CREATE OR REPLACE FUNCTION logout(tok VARCHAR(255))
+RETURNS void AS $$
+BEGIN
+  DELETE FROM authentication WHERE token = tok;
+END;
+$$ LANGUAGE plpgsql;
