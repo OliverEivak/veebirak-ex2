@@ -1,0 +1,21 @@
+title Create/update Service Request (SR = ServiceRequest in component names)
+
+participant User
+participant SRDetailCtrl
+participant sRService.js
+participant SRResource
+participant SRService
+participant SRDAO
+
+
+User -> SRDetailCtrl: press button
+SRDetailCtrl -> sRService.js: update(serviceRequest)
+sRService.js -> SRResource: makePost()
+SRResource -> SRService: update(serviceRequest)
+SRService -> SRService: validates/updates metadata
+SRService ->+ SRDAO: update(serviceRequest)
+SRDAO ->- SRService: serviceRequest
+SRService -> SRResource: serviceRequest
+SRResource -> sRService.js: HTTP response
+sRService.js -> SRDetailCtrl: serviceRequest
+SRDetailCtrl -> User: redirect to list view

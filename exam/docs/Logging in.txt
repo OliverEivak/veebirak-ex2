@@ -1,0 +1,24 @@
+title Logging in
+
+participant User
+participant HomeCtrl (js) as HomeCtrl
+participant loginService.js
+participant LoginResource
+participant LoginService
+participant UserAccountDAO
+
+User -> HomeCtrl: press button
+HomeCtrl -> loginService.js: login()
+loginService.js -> LoginResource: makePost()
+LoginResource -> LoginService: login()
+LoginService ->+ UserAccountDAO: findByUsername()
+UserAccountDAO ->- LoginService: UserAccount
+LoginService ->+ BCrypt: checkpw()
+BCrypt ->- LoginService: return true
+LoginService -> LoginService: create Authentication object
+LoginService ->+ AuthenticationDAO: update(authentication)
+AuthenticationDAO ->- LoginService: Authentication
+LoginService -> LoginResource: Authentication
+LoginResource -> loginService.js: HTTP response
+loginService.js -> loginService.js: save Authenticatication
+loginService.js -> loginService.js: reload page
