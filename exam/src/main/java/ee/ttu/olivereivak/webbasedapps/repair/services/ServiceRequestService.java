@@ -6,8 +6,8 @@ import java.util.List;
 import javax.inject.Inject;
 import javax.inject.Singleton;
 
-import ee.ttu.olivereivak.webbasedapps.repair.dao.ServiceOrderDAO;
-import ee.ttu.olivereivak.webbasedapps.repair.dao.ServiceRequestDAO;
+import ee.ttu.olivereivak.webbasedapps.repair.dao.repairshop.ServiceOrderDAO;
+import ee.ttu.olivereivak.webbasedapps.repair.dao.repairshop.ServiceRequestDAO;
 import ee.ttu.olivereivak.webbasedapps.repair.entity.UserAccount;
 import ee.ttu.olivereivak.webbasedapps.repair.entity.repairshop.ServiceOrder;
 import ee.ttu.olivereivak.webbasedapps.repair.entity.repairshop.ServiceRequest;

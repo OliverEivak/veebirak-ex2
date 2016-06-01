@@ -1,9 +1,10 @@
-package ee.ttu.olivereivak.webbasedapps.repair.dao;
+package ee.ttu.olivereivak.webbasedapps.repair.dao.repairshop;
 
 import java.util.List;
 
 import javax.persistence.TypedQuery;
 
+import ee.ttu.olivereivak.webbasedapps.repair.dao.BaseDAO;
 import ee.ttu.olivereivak.webbasedapps.repair.entity.repairshop.DeviceType;
 
 public class DeviceTypeDAO extends BaseDAO<DeviceType> {

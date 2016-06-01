@@ -1,4 +1,4 @@
-package ee.ttu.olivereivak.webbasedapps.repair.dao;
+package ee.ttu.olivereivak.webbasedapps.repair.dao.repairshop;
 
 import static org.apache.commons.lang.StringUtils.isEmpty;
 
@@ -14,6 +14,7 @@ import javax.persistence.criteria.Join;
 import javax.persistence.criteria.Predicate;
 import javax.persistence.criteria.Root;
 
+import ee.ttu.olivereivak.webbasedapps.repair.dao.BaseDAO;
 import ee.ttu.olivereivak.webbasedapps.repair.entity.repairshop.Device;
 import ee.ttu.olivereivak.webbasedapps.repair.entity.repairshop.DeviceType;
 import ee.ttu.olivereivak.webbasedapps.repair.entity.search.DeviceSearchQuery;

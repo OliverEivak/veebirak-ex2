@@ -5,7 +5,7 @@ import java.util.List;
 import javax.inject.Inject;
 import javax.inject.Singleton;
 
-import ee.ttu.olivereivak.webbasedapps.repair.dao.ServiceDeviceStatusTypeDAO;
+import ee.ttu.olivereivak.webbasedapps.repair.dao.repairshop.ServiceDeviceStatusTypeDAO;
 import ee.ttu.olivereivak.webbasedapps.repair.entity.repairshop.ServiceDeviceStatusType;
 
 @Singleton

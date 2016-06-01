@@ -10,6 +10,7 @@ import java.util.List;
 import org.junit.Before;
 import org.junit.Test;
 
+import ee.ttu.olivereivak.webbasedapps.repair.dao.subject.CustomerDAO;
 import ee.ttu.olivereivak.webbasedapps.repair.entity.subject.Customer;
 import ee.ttu.olivereivak.webbasedapps.repair.entity.subject.Person;
 import ee.ttu.olivereivak.webbasedapps.repair.entity.subject.Subject;
@@ -22,6 +23,12 @@ public class CustomerDAOTest extends DAOTestBase {
     @Before
     public void setUp() {
         customerDAO = instance(CustomerDAO.class);
+    }
+
+    @Test
+    public void findAll() {
+        List<Customer> customers = customerDAO.findAll();
+        assertEquals(3, customers.size());
     }
 
     @Test

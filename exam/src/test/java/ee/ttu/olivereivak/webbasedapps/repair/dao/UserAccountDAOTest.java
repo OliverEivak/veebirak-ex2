@@ -11,7 +11,7 @@ import ee.ttu.olivereivak.webbasedapps.repair.test.DAOTestBase;
 public class UserAccountDAOTest extends DAOTestBase {
 
     @Test
-    public void find() {
+    public void findByUsername() {
         UserAccountDAO userAccountDAO = instance(UserAccountDAO.class);
 
         UserAccount userAccount = userAccountDAO.findByUsername("juhan");

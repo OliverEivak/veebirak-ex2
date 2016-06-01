@@ -5,7 +5,7 @@ import java.util.List;
 import javax.inject.Inject;
 import javax.inject.Singleton;
 
-import ee.ttu.olivereivak.webbasedapps.repair.dao.DeviceDAO;
+import ee.ttu.olivereivak.webbasedapps.repair.dao.repairshop.DeviceDAO;
 import ee.ttu.olivereivak.webbasedapps.repair.entity.UserAccount;
 import ee.ttu.olivereivak.webbasedapps.repair.entity.repairshop.Device;
 import ee.ttu.olivereivak.webbasedapps.repair.entity.search.DeviceSearchQuery;

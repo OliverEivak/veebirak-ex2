@@ -1,10 +1,11 @@
-package ee.ttu.olivereivak.webbasedapps.repair.dao;
+package ee.ttu.olivereivak.webbasedapps.repair.dao.subject;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
 import javax.persistence.TypedQuery;
 
+import ee.ttu.olivereivak.webbasedapps.repair.dao.BaseDAO;
 import ee.ttu.olivereivak.webbasedapps.repair.entity.subject.Customer;
 
 public class CustomerDAO extends BaseDAO<Customer> {

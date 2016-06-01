@@ -9,7 +9,7 @@ import org.easymock.TestSubject;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
-import ee.ttu.olivereivak.webbasedapps.repair.dao.AuthenticationDAO;
+import ee.ttu.olivereivak.webbasedapps.repair.dao.AuthenticationJdbcDAO;
 import ee.ttu.olivereivak.webbasedapps.repair.entity.Authentication;
 import ee.ttu.olivereivak.webbasedapps.repair.entity.UserAccount;
 
@@ -20,7 +20,7 @@ public class LogoutServiceTest {
     private LogoutService logoutService = new LogoutService();
 
     @Mock
-    private AuthenticationDAO authenticationDAO;
+    private AuthenticationJdbcDAO authenticationJdbcDAO;
 
     @Test
     public void logout() throws Exception {
@@ -29,13 +29,13 @@ public class LogoutServiceTest {
         userAccount.setUsername("user-who-is-logging-out");
         authentication.setUserAccount(userAccount);
 
-        authenticationDAO.remove(authentication);
+        authenticationJdbcDAO.remove(authentication);
 
-        replay(authenticationDAO);
+        replay(authenticationJdbcDAO);
 
         logoutService.logout(authentication);
 
-        verify(authenticationDAO);
+        verify(authenticationJdbcDAO);
     }
 
 }
