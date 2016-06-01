@@ -9,10 +9,9 @@ angular.module('app.serviceRequest', ['ngRoute'])
         });
     }])
 
-    .controller('ServiceRequestCtrl', ['$scope', 'authenticationService', 'serviceRequestService',
-        function ($scope, authenticationService, serviceRequestService) {
+    .controller('ServiceRequestCtrl', ['$scope', 'serviceRequestService',
+        function ($scope, serviceRequestService) {
 
-            $scope.isAuthenticated = authenticationService.isAuthenticated;
             $scope.data = {};
 
             init();

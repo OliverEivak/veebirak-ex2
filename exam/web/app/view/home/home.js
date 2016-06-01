@@ -20,12 +20,6 @@ angular.module('app.home', ['ngRoute'])
                 formLogin: {}
             };
 
-            init();
-
-            function init() {
-
-            }
-
             $scope.login = function () {
                 if ($scope.data.formLogin.$valid) {
                     $scope.data.showLoginError = false;
@@ -33,11 +27,7 @@ angular.module('app.home', ['ngRoute'])
                 }
             };
 
-            $scope.cancel = function () {
-                $scope.loginForm = {};
-            };
-
-            function loginFail(response) {
+            function loginFail() {
                 $scope.data.showLoginError = true;
             }
 

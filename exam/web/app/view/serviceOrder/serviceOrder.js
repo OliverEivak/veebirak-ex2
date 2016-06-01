@@ -9,8 +9,8 @@ angular.module('app.serviceOrder', ['ngRoute'])
         });
     }])
 
-    .controller('ServiceOrderCtrl', ['$scope', 'authenticationService', 'serviceOrderService',
-        function ($scope, authenticationService, serviceOrderService) {
+    .controller('ServiceOrderCtrl', ['$scope', 'serviceOrderService',
+        function ($scope, serviceOrderService) {
 
             $scope.data = {};
 
