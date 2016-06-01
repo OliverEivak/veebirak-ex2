@@ -3,334 +3,342 @@
   <ID>JAVA</ID>
   <OriginalElement>ee.ttu.olivereivak.webbasedapps.repair</OriginalElement>
   <nodes>
-    <node x="0.0" y="3367.0">ee.ttu.olivereivak.webbasedapps.repair.services.DeviceTypeService</node>
-    <node x="279.0" y="2294.0">ee.ttu.olivereivak.webbasedapps.repair.dao.UserAccountDAO</node>
-    <node x="0.0" y="3491.0">ee.ttu.olivereivak.webbasedapps.repair.resource.exception.ApplicationExceptionMapper</node>
-    <node x="0.0" y="1481.0">ee.ttu.olivereivak.webbasedapps.repair.resource.DeviceTypeResource</node>
-    <node x="2482.0" y="3219.0">ee.ttu.olivereivak.webbasedapps.repair.services.LoginService</node>
-    <node x="1330.0" y="2430.0">ee.ttu.olivereivak.webbasedapps.repair.entity.subject.Employee</node>
-    <node x="576.0" y="3367.0">ee.ttu.olivereivak.webbasedapps.repair.guice.provider.FreemarkerConfigProvider</node>
-    <node x="1714.75" y="2041.0">ee.ttu.olivereivak.webbasedapps.repair.dao.BaseDAO</node>
-    <node x="2493.0" y="3047.0">ee.ttu.olivereivak.webbasedapps.repair.web.ApplicationWebServer</node>
-    <node x="1109.0" y="2794.0">ee.ttu.olivereivak.webbasedapps.repair.dao.AuthenticationJdbcDAO</node>
-    <node x="1100.0" y="3367.0">ee.ttu.olivereivak.webbasedapps.repair.entity.subject.SubjectType</node>
-    <node x="583.0" y="1629.0">ee.ttu.olivereivak.webbasedapps.repair.entity.search.DeviceSearchQuery</node>
-    <node x="1267.0" y="3219.0">ee.ttu.olivereivak.webbasedapps.repair.entity.converter.SubjectTypeConverter</node>
-    <node x="2005.0" y="1457.0">ee.ttu.olivereivak.webbasedapps.repair.resource.DeviceResource</node>
-    <node x="0.0" y="3219.0">ee.ttu.olivereivak.webbasedapps.repair.resource.servlet.ServiceRequestServlet</node>
-    <node x="1571.0" y="2282.0">ee.ttu.olivereivak.webbasedapps.repair.dao.repairshop.DeviceTypeDAO</node>
-    <node x="1517.0" y="3047.0">ee.ttu.olivereivak.webbasedapps.repair.entity.repairshop.ServiceActionStatusType</node>
-    <node x="678.0" y="2899.0">ee.ttu.olivereivak.webbasedapps.repair.resource.LoginResourceTest</node>
-    <node x="1524.0" y="2794.0">ee.ttu.olivereivak.webbasedapps.repair.services.ShutdownService</node>
-    <node x="484.50000000000006" y="2794.0">ee.ttu.olivereivak.webbasedapps.repair.test</node>
-    <node x="2613.0" y="1481.0">ee.ttu.olivereivak.webbasedapps.repair.resource.ServiceActionStatusTypeResource</node>
-    <node x="268.0" y="1481.0">ee.ttu.olivereivak.webbasedapps.repair.resource.ServiceDeviceStatusTypeResource</node>
-    <node x="952.0" y="3491.0">ee.ttu.olivereivak.webbasedapps.repair.guice.provider.ObjectMapperProvider</node>
-    <node x="629.9999999999999" y="1481.0">ee.ttu.olivereivak.webbasedapps.repair.resource.ServiceTypeResource</node>
-    <node x="2098.0" y="3219.0">ee.ttu.olivereivak.webbasedapps.repair.services.ServiceActionStatusTypeService</node>
-    <node x="2119.0" y="2430.0">ee.ttu.olivereivak.webbasedapps.repair.entity.repairshop.ServiceType</node>
-    <node x="1619.0" y="3491.0">ee.ttu.olivereivak.webbasedapps.repair.guice.module.EmptyModule</node>
-    <node x="0.0" y="2270.0">ee.ttu.olivereivak.webbasedapps.repair.dao.subject.CustomerDAO</node>
-    <node x="1294.0" y="2258.0">ee.ttu.olivereivak.webbasedapps.repair.dao.repairshop.DeviceDAO</node>
-    <node x="2302.0" y="2794.0">ee.ttu.olivereivak.webbasedapps.repair.entity.Authentication</node>
+    <node x="2396.4285714285716" y="2966.285714285714">ee.ttu.olivereivak.webbasedapps.repair.services.DeviceTypeService</node>
+    <node x="3017.0" y="2640.0">ee.ttu.olivereivak.webbasedapps.repair.dao.UserAccountDAO</node>
+    <node x="589.8571428571428" y="3536.8571428571427">ee.ttu.olivereivak.webbasedapps.repair.resource.exception.ApplicationExceptionMapper</node>
+    <node x="2704.0" y="1935.0">ee.ttu.olivereivak.webbasedapps.repair.resource.DeviceTypeResource</node>
+    <node x="0.0" y="2764.0">ee.ttu.olivereivak.webbasedapps.repair.entity.subject.Employee</node>
+    <node x="1669.9999999999998" y="3238.285714285714">ee.ttu.olivereivak.webbasedapps.repair.services.LoginService</node>
+    <node x="246.86458333333337" y="1304.0">ee.ttu.olivereivak.webbasedapps.repair.test.TestBase</node>
+    <node x="2248.285714285714" y="3596.8571428571427">ee.ttu.olivereivak.webbasedapps.repair.guice.provider.FreemarkerConfigProvider</node>
+    <node x="1680.25" y="2447.0">ee.ttu.olivereivak.webbasedapps.repair.dao.BaseDAO</node>
+    <node x="1682.4285714285713" y="3438.285714285714">ee.ttu.olivereivak.webbasedapps.repair.dao.AuthenticationJdbcDAO</node>
+    <node x="3105.714285714286" y="3573.428571428571">ee.ttu.olivereivak.webbasedapps.repair.web.ApplicationWebServer</node>
+    <node x="19.571428571428584" y="3082.857142857143">ee.ttu.olivereivak.webbasedapps.repair.entity.subject.SubjectType</node>
+    <node x="1623.0" y="748.0">ee.ttu.olivereivak.webbasedapps.repair.entity.search.DeviceSearchQuery</node>
+    <node x="9.71428571428578" y="3272.0">ee.ttu.olivereivak.webbasedapps.repair.entity.converter.SubjectTypeConverter</node>
+    <node x="1305.0" y="1911.0">ee.ttu.olivereivak.webbasedapps.repair.resource.DeviceResource</node>
+    <node x="1769.4285714285716" y="2901.142857142857">ee.ttu.olivereivak.webbasedapps.repair.resource.servlet.ServiceRequestServlet</node>
+    <node x="1806.0" y="2628.0">ee.ttu.olivereivak.webbasedapps.repair.dao.repairshop.DeviceTypeDAO</node>
+    <node x="813.0" y="3080.0">ee.ttu.olivereivak.webbasedapps.repair.entity.repairshop.ServiceActionStatusType</node>
+    <node x="270.86458333333337" y="1409.0">ee.ttu.olivereivak.webbasedapps.repair.resource.LoginResourceTest</node>
+    <node x="1793.8571428571431" y="2839.714285714286">ee.ttu.olivereivak.webbasedapps.repair.services.ShutdownService</node>
+    <node x="341.0" y="1935.0">ee.ttu.olivereivak.webbasedapps.repair.resource.ServiceActionStatusTypeResource</node>
+    <node x="2342.0" y="1935.0">ee.ttu.olivereivak.webbasedapps.repair.resource.ServiceDeviceStatusTypeResource</node>
+    <node x="2285.5714285714284" y="3699.714285714286">ee.ttu.olivereivak.webbasedapps.repair.guice.provider.ObjectMapperProvider</node>
+    <node x="700.0" y="1935.0">ee.ttu.olivereivak.webbasedapps.repair.resource.ServiceTypeResource</node>
+    <node x="2306.4285714285716" y="3116.285714285714">ee.ttu.olivereivak.webbasedapps.repair.services.ServiceActionStatusTypeService</node>
+    <node x="789.0" y="2764.0">ee.ttu.olivereivak.webbasedapps.repair.entity.repairshop.ServiceType</node>
+    <node x="3349.0" y="2616.0">ee.ttu.olivereivak.webbasedapps.repair.dao.subject.CustomerDAO</node>
+    <node x="5.714285714285779" y="3738.2857142857147">ee.ttu.olivereivak.webbasedapps.repair.guice.module.EmptyModule</node>
+    <node x="2077.0" y="2616.0">ee.ttu.olivereivak.webbasedapps.repair.dao.repairshop.DeviceDAO</node>
+    <node x="1346.1428571428567" y="2771.142857142858">ee.ttu.olivereivak.webbasedapps.repair.entity.Authentication</node>
     <node x="1695.0" y="0.0">ee.ttu.olivereivak.webbasedapps.repair.entity.UserAccount</node>
-    <node x="2013.0" y="3047.0">ee.ttu.olivereivak.webbasedapps.repair.entity.subject.Customer</node>
-    <node x="720.0" y="249.0">ee.ttu.olivereivak.webbasedapps.repair.entity.subject.Enterprise</node>
-    <node x="2803.0" y="2282.0">ee.ttu.olivereivak.webbasedapps.repair.dao.repairshop.ServiceActionDAO</node>
-    <node x="1835.0" y="2794.0">ee.ttu.olivereivak.webbasedapps.repair.config.ApplicationWebConfig</node>
-    <node x="2839.0" y="3219.0">ee.ttu.olivereivak.webbasedapps.repair.services.ServiceTypeService</node>
-    <node x="1766.0" y="3047.0">ee.ttu.olivereivak.webbasedapps.repair.entity.repairshop.ServiceOrderStatusType</node>
-    <node x="1265.0" y="3047.0">ee.ttu.olivereivak.webbasedapps.repair.entity.repairshop.ServiceDeviceStatusType</node>
-    <node x="359.0" y="3047.0">ee.ttu.olivereivak.webbasedapps.repair.resource.filter.ApplicationSecurityContext</node>
-    <node x="0.0" y="1629.0">ee.ttu.olivereivak.webbasedapps.repair.entity.repairshop.Device</node>
-    <node x="1188.0" y="3491.0">ee.ttu.olivereivak.webbasedapps.repair.Main</node>
-    <node x="3374.0" y="2282.0">ee.ttu.olivereivak.webbasedapps.repair.dao.repairshop.ServiceTypeDAO</node>
-    <node x="1135.0" y="177.0">ee.ttu.olivereivak.webbasedapps.repair.entity.subject.Person</node>
-    <node x="1433.4499999999998" y="1208.0">ee.ttu.olivereivak.webbasedapps.repair.resource.BaseResource</node>
-    <node x="433.00000000000006" y="2911.0">ee.ttu.olivereivak.webbasedapps.repair.dao.UserAccountDAOTest</node>
-    <node x="3087.0" y="2282.0">ee.ttu.olivereivak.webbasedapps.repair.dao.repairshop.ServiceDeviceDAO</node>
-    <node x="466.0" y="2430.0">ee.ttu.olivereivak.webbasedapps.repair.entity.repairshop.ServiceDevice</node>
-    <node x="704.0" y="3047.0">ee.ttu.olivereivak.webbasedapps.repair.services.DeviceService</node>
-    <node x="2144.0" y="2282.0">ee.ttu.olivereivak.webbasedapps.repair.dao.repairshop.ServiceActionStatusTypeDAO</node>
-    <node x="928.9999999999999" y="2282.0">ee.ttu.olivereivak.webbasedapps.repair.dao.repairshop.ServiceDeviceStatusTypeDAO</node>
-    <node x="864.0" y="2911.0">ee.ttu.olivereivak.webbasedapps.repair.resource.CustomerResourceITest</node>
-    <node x="293.0" y="3367.0">ee.ttu.olivereivak.webbasedapps.repair.guice.module.RestModule</node>
-    <node x="1411.0" y="3491.0">ee.ttu.olivereivak.webbasedapps.repair.services.LogoutServiceTest</node>
-    <node x="2295.0" y="0.0">ee.ttu.olivereivak.webbasedapps.repair.entity.repairshop.ServiceAction</node>
-    <node x="797.0" y="3219.0">ee.ttu.olivereivak.webbasedapps.repair.resource.filter.ApplicationPrincipal</node>
-    <node x="839.0" y="3367.0">ee.ttu.olivereivak.webbasedapps.repair.guice.GuiceInjector</node>
-    <node x="1711.0" y="3219.0">ee.ttu.olivereivak.webbasedapps.repair.services.ServiceDeviceStatusTypeService</node>
-    <node x="1055.0" y="1629.0">ee.ttu.olivereivak.webbasedapps.repair.entity.repairshop.ServiceRequest</node>
-    <node x="0.0" y="748.0">ee.ttu.olivereivak.webbasedapps.repair.entity.repairshop.ServicePart</node>
-    <node x="515.0" y="3219.0">ee.ttu.olivereivak.webbasedapps.repair.resource.filter.ApplicationPersistFilter</node>
-    <node x="1054.0" y="3219.0">ee.ttu.olivereivak.webbasedapps.repair.services.LoginServiceTest</node>
-    <node x="1556.0" y="3367.0">ee.ttu.olivereivak.webbasedapps.repair.util.ReflectionUtils</node>
-    <node x="664.0" y="3491.0">ee.ttu.olivereivak.webbasedapps.repair.services.LogoutService</node>
-    <node x="900.9999999999999" y="1493.0">ee.ttu.olivereivak.webbasedapps.repair.resource.LoginResource</node>
-    <node x="1842.0" y="2270.0">ee.ttu.olivereivak.webbasedapps.repair.dao.repairshop.ServiceOrderDAO</node>
+    <node x="1110.4285714285713" y="2767.142857142857">ee.ttu.olivereivak.webbasedapps.repair.entity.subject.Customer</node>
+    <node x="1255.0" y="249.0">ee.ttu.olivereivak.webbasedapps.repair.entity.subject.Enterprise</node>
+    <node x="471.11458333333337" y="1409.0">ee.ttu.olivereivak.webbasedapps.repair.test.DAOTestBase</node>
+    <node x="0.0" y="2628.0">ee.ttu.olivereivak.webbasedapps.repair.dao.repairshop.ServiceActionDAO</node>
+    <node x="2654.7142857142853" y="3569.7142857142853">ee.ttu.olivereivak.webbasedapps.repair.config.ApplicationWebConfig</node>
+    <node x="2053.285714285714" y="2980.5714285714284">ee.ttu.olivereivak.webbasedapps.repair.services.ServiceTypeService</node>
+    <node x="1110.5714285714284" y="2927.142857142857">ee.ttu.olivereivak.webbasedapps.repair.entity.repairshop.ServiceOrderStatusType</node>
+    <node x="561.0" y="3080.0">ee.ttu.olivereivak.webbasedapps.repair.entity.repairshop.ServiceDeviceStatusType</node>
+    <node x="3067.857142857143" y="2915.4285714285716">ee.ttu.olivereivak.webbasedapps.repair.resource.filter.ApplicationSecurityContext</node>
+    <node x="1040.0" y="748.0">ee.ttu.olivereivak.webbasedapps.repair.entity.repairshop.Device</node>
+    <node x="3084.428571428572" y="3183.9999999999995">ee.ttu.olivereivak.webbasedapps.repair.Main</node>
+    <node x="284.0" y="2628.0">ee.ttu.olivereivak.webbasedapps.repair.dao.repairshop.ServiceTypeDAO</node>
+    <node x="720.0" y="177.0">ee.ttu.olivereivak.webbasedapps.repair.entity.subject.Person</node>
+    <node x="1309.55" y="1710.0">ee.ttu.olivereivak.webbasedapps.repair.resource.BaseResource</node>
+    <node x="244.61458333333337" y="1574.0">ee.ttu.olivereivak.webbasedapps.repair.dao.UserAccountDAOTest</node>
+    <node x="558.0" y="2628.0">ee.ttu.olivereivak.webbasedapps.repair.dao.repairshop.ServiceDeviceDAO</node>
+    <node x="0.0" y="2083.0">ee.ttu.olivereivak.webbasedapps.repair.entity.repairshop.ServiceDevice</node>
+    <node x="1142.0" y="2628.0">ee.ttu.olivereivak.webbasedapps.repair.dao.repairshop.ServiceActionStatusTypeDAO</node>
+    <node x="1747.1428571428569" y="2971.4285714285716">ee.ttu.olivereivak.webbasedapps.repair.services.DeviceService</node>
+    <node x="2334.0" y="2628.0">ee.ttu.olivereivak.webbasedapps.repair.dao.repairshop.ServiceDeviceStatusTypeDAO</node>
+    <node x="12.0" y="1574.0">ee.ttu.olivereivak.webbasedapps.repair.resource.CustomerResourceITest</node>
+    <node x="2913.285714285714" y="3405.714285714286">ee.ttu.olivereivak.webbasedapps.repair.guice.module.RestModule</node>
+    <node x="0.0" y="3624.0">ee.ttu.olivereivak.webbasedapps.repair.services.LogoutServiceTest</node>
+    <node x="0.0" y="748.0">ee.ttu.olivereivak.webbasedapps.repair.entity.repairshop.ServiceAction</node>
+    <node x="3400.7142857142853" y="2830.0">ee.ttu.olivereivak.webbasedapps.repair.resource.filter.ApplicationPrincipal</node>
+    <node x="3352.8571428571427" y="3577.1428571428573">ee.ttu.olivereivak.webbasedapps.repair.guice.GuiceInjector</node>
+    <node x="1903.7142857142858" y="3120.5714285714284">ee.ttu.olivereivak.webbasedapps.repair.services.ServiceDeviceStatusTypeService</node>
+    <node x="2095.0" y="748.0">ee.ttu.olivereivak.webbasedapps.repair.entity.repairshop.ServiceRequest</node>
+    <node x="560.0" y="748.0">ee.ttu.olivereivak.webbasedapps.repair.entity.repairshop.ServicePart</node>
+    <node x="3411.571428571428" y="2955.714285714286">ee.ttu.olivereivak.webbasedapps.repair.resource.filter.ApplicationPersistFilter</node>
+    <node x="1024.2857142857142" y="3410.0">ee.ttu.olivereivak.webbasedapps.repair.util.ReflectionUtils</node>
+    <node x="214.28571428571428" y="3590.0">ee.ttu.olivereivak.webbasedapps.repair.services.LoginServiceTest</node>
+    <node x="1579.0" y="1947.0">ee.ttu.olivereivak.webbasedapps.repair.resource.LoginResource</node>
+    <node x="2026.0" y="3239.7142857142853">ee.ttu.olivereivak.webbasedapps.repair.services.LogoutService</node>
+    <node x="1504.0" y="2616.0">ee.ttu.olivereivak.webbasedapps.repair.dao.repairshop.ServiceOrderDAO</node>
     <node x="0.0" y="0.0">ee.ttu.olivereivak.webbasedapps.repair.entity.repairshop.ServiceOrder</node>
-    <node x="0.0" y="3047.0">ee.ttu.olivereivak.webbasedapps.repair.services.ServiceRequestService</node>
-    <node x="1216.4499999999998" y="1232.0">ee.ttu.olivereivak.webbasedapps.repair.resource.api</node>
-    <node x="218.00000000000006" y="2875.0">ee.ttu.olivereivak.webbasedapps.repair.dao.CustomerDAOTest</node>
-    <node x="1497.0" y="1493.0">ee.ttu.olivereivak.webbasedapps.repair.resource.LogoutResource</node>
-    <node x="1690.0" y="2430.0">ee.ttu.olivereivak.webbasedapps.repair.entity.repairshop.DeviceType</node>
-    <node x="2253.0" y="3047.0">ee.ttu.olivereivak.webbasedapps.repair.entity.repairshop.ServiceUnitType</node>
-    <node x="0.0" y="2911.0">ee.ttu.olivereivak.webbasedapps.repair.dao.AuthenticationDAOTest</node>
-    <node x="611.0" y="2294.0">ee.ttu.olivereivak.webbasedapps.repair.dao.AuthenticationDAO</node>
-    <node x="1924.0" y="3367.0">ee.ttu.olivereivak.webbasedapps.repair.services.CustomerService</node>
-    <node x="2646.0" y="3367.0">ee.ttu.olivereivak.webbasedapps.repair.util.SocketUtils</node>
-    <node x="1056.5" y="0.0">ee.ttu.olivereivak.webbasedapps.repair.entity.subject.Subject</node>
-    <node x="2582.0" y="2794.0">ee.ttu.olivereivak.webbasedapps.repair.guice.module.ApplicationModule</node>
-    <node x="2279.0" y="1457.0">ee.ttu.olivereivak.webbasedapps.repair.resource.ServiceRequestResource</node>
-    <node x="2506.0" y="2282.0">ee.ttu.olivereivak.webbasedapps.repair.dao.repairshop.ServiceRequestDAO</node>
-    <node x="1003.0" y="3047.0">ee.ttu.olivereivak.webbasedapps.repair.entity.repairshop.ServiceRequestStatusType</node>
-    <node x="2290.0" y="3367.0">ee.ttu.olivereivak.webbasedapps.repair.resource.filter.AuthenticationFilter</node>
-    <node x="1329.0" y="3367.0">ee.ttu.olivereivak.webbasedapps.repair.guice.module.TestModule</node>
-    <node x="1198.0" y="1469.0">ee.ttu.olivereivak.webbasedapps.repair.resource.ServiceOrderResource</node>
-    <node x="336.0" y="3491.0">ee.ttu.olivereivak.webbasedapps.repair.resource.filter.AuthHeadersRequestFilter</node>
-    <node x="0.0" y="2430.0">ee.ttu.olivereivak.webbasedapps.repair.config.ApplicationConfig</node>
-    <node x="1664.0" y="1493.0">ee.ttu.olivereivak.webbasedapps.repair.resource.CustomerResource</node>
-    <node x="866.0" y="2430.0">ee.ttu.olivereivak.webbasedapps.repair.services.ServiceOrderService</node>
+    <node x="1724.05" y="1710.0">ee.ttu.olivereivak.webbasedapps.repair.resource.api</node>
+    <node x="707.6145833333334" y="1538.0">ee.ttu.olivereivak.webbasedapps.repair.dao.CustomerDAOTest</node>
+    <node x="1987.4285714285713" y="2811.142857142857">ee.ttu.olivereivak.webbasedapps.repair.services.ServiceRequestService</node>
+    <node x="1876.0" y="1947.0">ee.ttu.olivereivak.webbasedapps.repair.resource.LogoutResource</node>
+    <node x="360.0" y="2764.0">ee.ttu.olivereivak.webbasedapps.repair.entity.repairshop.DeviceType</node>
+    <node x="1111.8571428571431" y="3075.714285714286">ee.ttu.olivereivak.webbasedapps.repair.entity.repairshop.ServiceUnitType</node>
+    <node x="2699.0" y="2640.0">ee.ttu.olivereivak.webbasedapps.repair.dao.AuthenticationDAO</node>
+    <node x="489.61458333333337" y="1574.0">ee.ttu.olivereivak.webbasedapps.repair.dao.AuthenticationDAOTest</node>
+    <node x="1018.5714285714289" y="3524.285714285714">ee.ttu.olivereivak.webbasedapps.repair.util.SocketUtils</node>
+    <node x="2332.2857142857138" y="3248.571428571429">ee.ttu.olivereivak.webbasedapps.repair.services.CustomerService</node>
+    <node x="1116.5" y="0.0">ee.ttu.olivereivak.webbasedapps.repair.entity.subject.Subject</node>
+    <node x="2948.5714285714284" y="3294.8571428571427">ee.ttu.olivereivak.webbasedapps.repair.guice.module.ApplicationModule</node>
+    <node x="971.0" y="1911.0">ee.ttu.olivereivak.webbasedapps.repair.resource.ServiceRequestResource</node>
+    <node x="845.0000000000001" y="2628.0">ee.ttu.olivereivak.webbasedapps.repair.dao.repairshop.ServiceRequestDAO</node>
+    <node x="3058.285714285714" y="2830.0">ee.ttu.olivereivak.webbasedapps.repair.resource.filter.AuthenticationFilter</node>
+    <node x="299.0" y="3080.0">ee.ttu.olivereivak.webbasedapps.repair.entity.repairshop.ServiceRequestStatusType</node>
+    <node x="185.7142857142857" y="3739.7142857142853">ee.ttu.olivereivak.webbasedapps.repair.guice.module.TestModule</node>
+    <node x="2043.0" y="1923.0">ee.ttu.olivereivak.webbasedapps.repair.resource.ServiceOrderResource</node>
+    <node x="584.4285714285714" y="3738.285714285714">ee.ttu.olivereivak.webbasedapps.repair.resource.filter.AuthHeadersRequestFilter</node>
+    <node x="400.0" y="2083.0">ee.ttu.olivereivak.webbasedapps.repair.config.ApplicationConfig</node>
+    <node x="0.0" y="1947.0">ee.ttu.olivereivak.webbasedapps.repair.resource.CustomerResource</node>
+    <node x="2367.571428571429" y="2811.428571428571">ee.ttu.olivereivak.webbasedapps.repair.services.ServiceOrderService</node>
+    <node x="0.0" y="1409.0">ee.ttu.olivereivak.webbasedapps.repair.test.IntegrationTestBase</node>
   </nodes>
   <notes />
   <edges>
+    <edge source="ee.ttu.olivereivak.webbasedapps.repair.resource.CustomerResourceITest" target="ee.ttu.olivereivak.webbasedapps.repair.test.IntegrationTestBase">
+      <point x="0.0" y="-27.5" />
+      <point x="0.0" y="39.5" />
+    </edge>
     <edge source="ee.ttu.olivereivak.webbasedapps.repair.entity.subject.Enterprise" target="ee.ttu.olivereivak.webbasedapps.repair.entity.subject.Subject">
       <point x="0.0" y="-183.5" />
-      <point x="917.5" y="152.0" />
-      <point x="1105.75" y="152.0" />
-      <point x="-49.25" y="63.5" />
+      <point x="1452.5" y="152.0" />
+      <point x="1264.25" y="152.0" />
+      <point x="49.25" y="63.5" />
     </edge>
-    <edge source="ee.ttu.olivereivak.webbasedapps.repair.dao.UserAccountDAOTest" target="ee.ttu.olivereivak.webbasedapps.repair.test">
-      <point x="0.0" y="-27.5" />
-      <point x="0.0" y="15.5" />
+    <edge source="ee.ttu.olivereivak.webbasedapps.repair.test.IntegrationTestBase" target="ee.ttu.olivereivak.webbasedapps.repair.test.TestBase">
+      <point x="0.0" y="-39.5" />
+      <point x="112.0" y="1384.0" />
+      <point x="282.53125000000006" y="1384.0" />
+      <point x="-71.33333333333331" y="27.5" />
     </edge>
     <edge source="ee.ttu.olivereivak.webbasedapps.repair.dao.repairshop.ServiceDeviceStatusTypeDAO" target="ee.ttu.olivereivak.webbasedapps.repair.dao.BaseDAO">
       <point x="0.0" y="-39.5" />
-      <point x="1101.5" y="2218.0" />
-      <point x="1787.6666666666665" y="2218.0" />
-      <point x="-52.08333333333337" y="63.5" />
+      <point x="2506.5" y="2576.0" />
+      <point x="1833.25" y="2576.0" />
+      <point x="45.0" y="39.5" />
     </edge>
     <edge source="ee.ttu.olivereivak.webbasedapps.repair.dao.subject.CustomerDAO" target="ee.ttu.olivereivak.webbasedapps.repair.dao.BaseDAO">
       <point x="0.0" y="-51.5" />
-      <point x="129.5" y="2188.0" />
-      <point x="1725.1666666666665" y="2188.0" />
-      <point x="-114.58333333333337" y="63.5" />
+      <point x="3478.5" y="2546.0" />
+      <point x="1887.25" y="2546.0" />
+      <point x="99.0" y="39.5" />
     </edge>
     <edge source="ee.ttu.olivereivak.webbasedapps.repair.dao.repairshop.ServiceActionDAO" target="ee.ttu.olivereivak.webbasedapps.repair.dao.BaseDAO">
       <point x="0.0" y="-39.5" />
-      <point x="2935.0" y="2208.0" />
-      <point x="1912.6666666666665" y="2208.0" />
-      <point x="72.91666666666652" y="63.5" />
-    </edge>
-    <edge source="ee.ttu.olivereivak.webbasedapps.repair.dao.AuthenticationDAOTest" target="ee.ttu.olivereivak.webbasedapps.repair.test">
-      <point x="0.0" y="-27.5" />
-      <point x="99.0" y="2845.0" />
-      <point x="496.70000000000005" y="2845.0" />
-      <point x="-48.80000000000001" y="15.5" />
+      <point x="132.0" y="2546.0" />
+      <point x="1689.25" y="2546.0" />
+      <point x="-99.0" y="39.5" />
     </edge>
     <edge source="ee.ttu.olivereivak.webbasedapps.repair.dao.AuthenticationDAO" target="ee.ttu.olivereivak.webbasedapps.repair.dao.BaseDAO">
       <point x="0.0" y="-27.5" />
-      <point x="760.0" y="2208.0" />
-      <point x="1766.8333333333335" y="2208.0" />
-      <point x="-72.91666666666663" y="63.5" />
+      <point x="2848.0" y="2566.0" />
+      <point x="1851.25" y="2566.0" />
+      <point x="63.0" y="39.5" />
     </edge>
     <edge source="ee.ttu.olivereivak.webbasedapps.repair.resource.ServiceTypeResource" target="ee.ttu.olivereivak.webbasedapps.repair.resource.api">
-      <point x="-62.75" y="-39.5" />
-      <point x="692.7499999999999" y="1377.0" />
-      <point x="1244.9499999999998" y="1377.0" />
+      <point x="62.75" y="-39.5" />
+      <point x="888.25" y="1871.0" />
+      <point x="1752.55" y="1871.0" />
       <point x="-28.5" y="15.5" />
     </edge>
     <edge source="ee.ttu.olivereivak.webbasedapps.repair.resource.LoginResource" target="ee.ttu.olivereivak.webbasedapps.repair.resource.api">
-      <point x="-69.25" y="-27.5" />
-      <point x="970.2499999999999" y="1387.0" />
-      <point x="1256.35" y="1387.0" />
-      <point x="-17.100000000000023" y="15.5" />
+      <point x="69.25" y="-27.5" />
+      <point x="5.7000000000000455" y="15.5" />
     </edge>
     <edge source="ee.ttu.olivereivak.webbasedapps.repair.dao.repairshop.ServiceOrderDAO" target="ee.ttu.olivereivak.webbasedapps.repair.dao.BaseDAO">
       <point x="0.0" y="-51.5" />
-      <point x="1983.0" y="2238.0" />
-      <point x="1850.1666666666665" y="2238.0" />
-      <point x="10.416666666666515" y="63.5" />
+      <point x="1645.0" y="2596.0" />
+      <point x="1779.25" y="2596.0" />
+      <point x="-9.0" y="39.5" />
     </edge>
     <edge source="ee.ttu.olivereivak.webbasedapps.repair.dao.repairshop.DeviceTypeDAO" target="ee.ttu.olivereivak.webbasedapps.repair.dao.BaseDAO">
       <point x="0.0" y="-39.5" />
-      <point x="1696.5" y="2238.0" />
-      <point x="1829.3333333333333" y="2238.0" />
-      <point x="-10.416666666666742" y="63.5" />
+      <point x="1931.5" y="2596.0" />
+      <point x="1797.25" y="2596.0" />
+      <point x="9.0" y="39.5" />
     </edge>
     <edge source="ee.ttu.olivereivak.webbasedapps.repair.resource.CustomerResource" target="ee.ttu.olivereivak.webbasedapps.repair.resource.BaseResource">
-      <point x="80.25" y="-27.5" />
-      <point x="1904.75" y="1367.0" />
-      <point x="1638.85" y="1367.0" />
-      <point x="47.40000000000009" y="39.5" />
+      <point x="-80.25" y="-27.5" />
+      <point x="80.25" y="1811.0" />
+      <point x="1316.1" y="1811.0" />
+      <point x="-58.950000000000045" y="15.5" />
     </edge>
     <edge source="ee.ttu.olivereivak.webbasedapps.repair.resource.DeviceTypeResource" target="ee.ttu.olivereivak.webbasedapps.repair.resource.BaseResource">
-      <point x="62.0" y="-39.5" />
-      <point x="186.0" y="1397.0" />
-      <point x="1449.25" y="1397.0" />
-      <point x="-142.20000000000005" y="39.5" />
+      <point x="-62.0" y="-39.5" />
+      <point x="2766.0" y="1771.0" />
+      <point x="1434.0" y="1771.0" />
+      <point x="58.950000000000045" y="15.5" />
     </edge>
     <edge source="ee.ttu.olivereivak.webbasedapps.repair.resource.LogoutResource" target="ee.ttu.olivereivak.webbasedapps.repair.resource.BaseResource">
-      <point x="36.75" y="-27.5" />
-      <point x="15.799999999999955" y="39.5" />
+      <point x="-36.75" y="-27.5" />
+      <point x="1912.75" y="1831.0" />
+      <point x="1394.6999999999998" y="1831.0" />
+      <point x="19.649999999999864" y="15.5" />
     </edge>
     <edge source="ee.ttu.olivereivak.webbasedapps.repair.resource.DeviceResource" target="ee.ttu.olivereivak.webbasedapps.repair.resource.BaseResource">
-      <point x="63.5" y="-63.5" />
-      <point x="2195.5" y="1347.0" />
-      <point x="1670.4499999999998" y="1347.0" />
-      <point x="79.0" y="39.5" />
+      <point x="-63.5" y="-63.5" />
+      <point x="-6.5499999999999545" y="15.5" />
     </edge>
     <edge source="ee.ttu.olivereivak.webbasedapps.repair.resource.ServiceActionStatusTypeResource" target="ee.ttu.olivereivak.webbasedapps.repair.resource.BaseResource">
-      <point x="84.75" y="-39.5" />
-      <point x="2867.25" y="1307.0" />
-      <point x="1733.65" y="1307.0" />
-      <point x="142.20000000000005" y="39.5" />
+      <point x="-84.75" y="-39.5" />
+      <point x="425.75" y="1821.0" />
+      <point x="1329.2" y="1821.0" />
+      <point x="-45.84999999999991" y="15.5" />
     </edge>
     <edge source="ee.ttu.olivereivak.webbasedapps.repair.dao.repairshop.ServiceDeviceDAO" target="ee.ttu.olivereivak.webbasedapps.repair.dao.BaseDAO">
       <point x="0.0" y="-39.5" />
-      <point x="3220.5" y="2198.0" />
-      <point x="1933.5" y="2198.0" />
-      <point x="93.75" y="63.5" />
-    </edge>
-    <edge source="ee.ttu.olivereivak.webbasedapps.repair.dao.CustomerDAOTest" target="ee.ttu.olivereivak.webbasedapps.repair.test">
-      <point x="0.0" y="-63.5" />
-      <point x="315.50000000000006" y="2855.0" />
-      <point x="521.1000000000001" y="2855.0" />
-      <point x="-24.399999999999977" y="15.5" />
+      <point x="691.5" y="2566.0" />
+      <point x="1725.25" y="2566.0" />
+      <point x="-63.0" y="39.5" />
     </edge>
     <edge source="ee.ttu.olivereivak.webbasedapps.repair.resource.ServiceRequestResource" target="ee.ttu.olivereivak.webbasedapps.repair.resource.BaseResource">
-      <point x="78.5" y="-63.5" />
-      <point x="2514.5" y="1327.0" />
-      <point x="1702.0500000000002" y="1327.0" />
-      <point x="110.60000000000014" y="39.5" />
+      <point x="-78.5" y="-63.5" />
+      <point x="1049.5" y="1841.0" />
+      <point x="1355.3999999999999" y="1841.0" />
+      <point x="-19.65000000000009" y="15.5" />
     </edge>
     <edge source="ee.ttu.olivereivak.webbasedapps.repair.resource.ServiceOrderResource" target="ee.ttu.olivereivak.webbasedapps.repair.resource.BaseResource">
-      <point x="69.75" y="-51.5" />
-      <point x="1407.25" y="1437.0" />
-      <point x="1575.65" y="1437.0" />
-      <point x="-15.799999999999955" y="39.5" />
+      <point x="-69.75" y="-51.5" />
+      <point x="2112.75" y="1811.0" />
+      <point x="1407.8" y="1811.0" />
+      <point x="32.75" y="15.5" />
+    </edge>
+    <edge source="ee.ttu.olivereivak.webbasedapps.repair.resource.LoginResourceTest" target="ee.ttu.olivereivak.webbasedapps.repair.test.TestBase">
+      <point x="0.0" y="-39.5" />
+      <point x="0.0" y="27.5" />
     </edge>
     <edge source="ee.ttu.olivereivak.webbasedapps.repair.dao.UserAccountDAO" target="ee.ttu.olivereivak.webbasedapps.repair.dao.BaseDAO">
       <point x="0.0" y="-27.5" />
-      <point x="435.0" y="2198.0" />
-      <point x="1746.0" y="2198.0" />
-      <point x="-93.75" y="63.5" />
+      <point x="3173.0" y="2556.0" />
+      <point x="1869.25" y="2556.0" />
+      <point x="81.0" y="39.5" />
     </edge>
     <edge source="ee.ttu.olivereivak.webbasedapps.repair.resource.LoginResource" target="ee.ttu.olivereivak.webbasedapps.repair.resource.BaseResource">
-      <point x="69.25" y="-27.5" />
-      <point x="1108.75" y="1427.0" />
-      <point x="1544.0499999999997" y="1427.0" />
-      <point x="-47.40000000000009" y="39.5" />
+      <point x="-69.25" y="-27.5" />
+      <point x="1648.25" y="1841.0" />
+      <point x="1381.6" y="1841.0" />
+      <point x="6.5499999999999545" y="15.5" />
     </edge>
     <edge source="ee.ttu.olivereivak.webbasedapps.repair.resource.ServiceTypeResource" target="ee.ttu.olivereivak.webbasedapps.repair.resource.BaseResource">
-      <point x="62.75" y="-39.5" />
-      <point x="818.2499999999999" y="1417.0" />
-      <point x="1512.4499999999998" y="1417.0" />
-      <point x="-79.0" y="39.5" />
+      <point x="-62.75" y="-39.5" />
+      <point x="762.75" y="1831.0" />
+      <point x="1342.3" y="1831.0" />
+      <point x="-32.75" y="15.5" />
     </edge>
     <edge source="ee.ttu.olivereivak.webbasedapps.repair.resource.DeviceResource" target="ee.ttu.olivereivak.webbasedapps.repair.resource.api">
-      <point x="-63.5" y="-63.5" />
-      <point x="2068.5" y="1357.0" />
-      <point x="1301.9499999999998" y="1357.0" />
-      <point x="28.5" y="15.5" />
+      <point x="63.5" y="-63.5" />
+      <point x="1495.5" y="1891.0" />
+      <point x="1775.35" y="1891.0" />
+      <point x="-5.7000000000000455" y="15.5" />
     </edge>
     <edge source="ee.ttu.olivereivak.webbasedapps.repair.entity.subject.Person" target="ee.ttu.olivereivak.webbasedapps.repair.entity.subject.Subject">
       <point x="0.0" y="-255.5" />
-      <point x="1392.5" y="152.0" />
-      <point x="1204.25" y="152.0" />
-      <point x="49.25" y="63.5" />
+      <point x="977.5" y="152.0" />
+      <point x="1165.75" y="152.0" />
+      <point x="-49.25" y="63.5" />
+    </edge>
+    <edge source="ee.ttu.olivereivak.webbasedapps.repair.dao.UserAccountDAOTest" target="ee.ttu.olivereivak.webbasedapps.repair.test.DAOTestBase">
+      <point x="0.0" y="-27.5" />
+      <point x="357.11458333333337" y="1513.0" />
+      <point x="510.28125000000006" y="1513.0" />
+      <point x="-78.33333333333331" y="39.5" />
     </edge>
     <edge source="ee.ttu.olivereivak.webbasedapps.repair.resource.ServiceDeviceStatusTypeResource" target="ee.ttu.olivereivak.webbasedapps.repair.resource.BaseResource">
-      <point x="85.5" y="-39.5" />
-      <point x="524.5" y="1407.0" />
-      <point x="1480.85" y="1407.0" />
-      <point x="-110.59999999999991" y="39.5" />
+      <point x="-85.5" y="-39.5" />
+      <point x="2427.5" y="1791.0" />
+      <point x="1420.8999999999999" y="1791.0" />
+      <point x="45.84999999999991" y="15.5" />
+    </edge>
+    <edge source="ee.ttu.olivereivak.webbasedapps.repair.test.DAOTestBase" target="ee.ttu.olivereivak.webbasedapps.repair.test.TestBase">
+      <point x="0.0" y="-39.5" />
+      <point x="588.6145833333334" y="1384.0" />
+      <point x="425.1979166666667" y="1384.0" />
+      <point x="71.33333333333331" y="27.5" />
     </edge>
     <edge source="ee.ttu.olivereivak.webbasedapps.repair.resource.CustomerResource" target="ee.ttu.olivereivak.webbasedapps.repair.resource.api">
-      <point x="-80.25" y="-27.5" />
-      <point x="1744.25" y="1377.0" />
-      <point x="1290.55" y="1377.0" />
-      <point x="17.100000000000023" y="15.5" />
-    </edge>
-    <edge source="ee.ttu.olivereivak.webbasedapps.repair.resource.ServiceOrderResource" target="ee.ttu.olivereivak.webbasedapps.repair.resource.api">
-      <point x="-69.75" y="-51.5" />
-      <point x="-5.7000000000000455" y="15.5" />
-    </edge>
-    <edge source="ee.ttu.olivereivak.webbasedapps.repair.dao.repairshop.DeviceDAO" target="ee.ttu.olivereivak.webbasedapps.repair.dao.BaseDAO">
-      <point x="0.0" y="-63.5" />
-      <point x="1422.5" y="2228.0" />
-      <point x="1808.5" y="2228.0" />
-      <point x="-31.25" y="63.5" />
-    </edge>
-    <edge source="ee.ttu.olivereivak.webbasedapps.repair.resource.DeviceTypeResource" target="ee.ttu.olivereivak.webbasedapps.repair.resource.api">
-      <point x="-62.0" y="-39.5" />
-      <point x="62.0" y="1357.0" />
-      <point x="1222.15" y="1357.0" />
+      <point x="80.25" y="-27.5" />
+      <point x="240.75" y="1851.0" />
+      <point x="1729.75" y="1851.0" />
       <point x="-51.299999999999955" y="15.5" />
     </edge>
-    <edge source="ee.ttu.olivereivak.webbasedapps.repair.resource.LoginResourceTest" target="ee.ttu.olivereivak.webbasedapps.repair.test">
-      <point x="0.0" y="-39.5" />
-      <point x="761.0" y="2855.0" />
-      <point x="569.9000000000001" y="2855.0" />
-      <point x="24.399999999999977" y="15.5" />
+    <edge source="ee.ttu.olivereivak.webbasedapps.repair.resource.ServiceOrderResource" target="ee.ttu.olivereivak.webbasedapps.repair.resource.api">
+      <point x="69.75" y="-51.5" />
+      <point x="2252.25" y="1801.0" />
+      <point x="1809.55" y="1801.0" />
+      <point x="28.5" y="15.5" />
     </edge>
-    <edge source="ee.ttu.olivereivak.webbasedapps.repair.resource.CustomerResourceITest" target="ee.ttu.olivereivak.webbasedapps.repair.test">
-      <point x="0.0" y="-27.5" />
-      <point x="964.0" y="2845.0" />
-      <point x="594.3" y="2845.0" />
-      <point x="48.799999999999955" y="15.5" />
+    <edge source="ee.ttu.olivereivak.webbasedapps.repair.dao.repairshop.DeviceDAO" target="ee.ttu.olivereivak.webbasedapps.repair.dao.BaseDAO">
+      <point x="0.0" y="-51.5" />
+      <point x="2195.5" y="2586.0" />
+      <point x="1815.25" y="2586.0" />
+      <point x="27.0" y="39.5" />
+    </edge>
+    <edge source="ee.ttu.olivereivak.webbasedapps.repair.resource.DeviceTypeResource" target="ee.ttu.olivereivak.webbasedapps.repair.resource.api">
+      <point x="62.0" y="-39.5" />
+      <point x="2890.0" y="1761.0" />
+      <point x="1832.35" y="1761.0" />
+      <point x="51.299999999999955" y="15.5" />
     </edge>
     <edge source="ee.ttu.olivereivak.webbasedapps.repair.resource.ServiceDeviceStatusTypeResource" target="ee.ttu.olivereivak.webbasedapps.repair.resource.api">
-      <point x="-85.5" y="-39.5" />
-      <point x="353.5" y="1367.0" />
-      <point x="1233.55" y="1367.0" />
-      <point x="-39.89999999999998" y="15.5" />
+      <point x="85.5" y="-39.5" />
+      <point x="2598.5" y="1781.0" />
+      <point x="1820.95" y="1781.0" />
+      <point x="39.90000000000009" y="15.5" />
     </edge>
     <edge source="ee.ttu.olivereivak.webbasedapps.repair.resource.ServiceRequestResource" target="ee.ttu.olivereivak.webbasedapps.repair.resource.api">
-      <point x="-78.5" y="-63.5" />
-      <point x="2357.5" y="1337.0" />
-      <point x="1313.35" y="1337.0" />
-      <point x="39.90000000000009" y="15.5" />
+      <point x="78.5" y="-63.5" />
+      <point x="1206.5" y="1881.0" />
+      <point x="1763.95" y="1881.0" />
+      <point x="-17.09999999999991" y="15.5" />
     </edge>
     <edge source="ee.ttu.olivereivak.webbasedapps.repair.dao.repairshop.ServiceTypeDAO" target="ee.ttu.olivereivak.webbasedapps.repair.dao.BaseDAO">
       <point x="0.0" y="-39.5" />
-      <point x="3501.0" y="2188.0" />
-      <point x="1954.3333333333333" y="2188.0" />
-      <point x="114.58333333333326" y="63.5" />
+      <point x="411.0" y="2556.0" />
+      <point x="1707.25" y="2556.0" />
+      <point x="-81.0" y="39.5" />
+    </edge>
+    <edge source="ee.ttu.olivereivak.webbasedapps.repair.dao.CustomerDAOTest" target="ee.ttu.olivereivak.webbasedapps.repair.test.DAOTestBase">
+      <point x="0.0" y="-63.5" />
+      <point x="805.1145833333334" y="1513.0" />
+      <point x="666.9479166666667" y="1513.0" />
+      <point x="78.33333333333337" y="39.5" />
     </edge>
     <edge source="ee.ttu.olivereivak.webbasedapps.repair.dao.repairshop.ServiceActionStatusTypeDAO" target="ee.ttu.olivereivak.webbasedapps.repair.dao.BaseDAO">
       <point x="0.0" y="-39.5" />
-      <point x="2315.0" y="2228.0" />
-      <point x="1871.0" y="2228.0" />
-      <point x="31.25" y="63.5" />
+      <point x="1313.0" y="2586.0" />
+      <point x="1761.25" y="2586.0" />
+      <point x="-27.0" y="39.5" />
     </edge>
     <edge source="ee.ttu.olivereivak.webbasedapps.repair.resource.LogoutResource" target="ee.ttu.olivereivak.webbasedapps.repair.resource.api">
-      <point x="-36.75" y="-27.5" />
-      <point x="1533.75" y="1387.0" />
-      <point x="1279.15" y="1387.0" />
-      <point x="5.7000000000000455" y="15.5" />
+      <point x="36.75" y="-27.5" />
+      <point x="1986.25" y="1821.0" />
+      <point x="1798.15" y="1821.0" />
+      <point x="17.100000000000136" y="15.5" />
     </edge>
     <edge source="ee.ttu.olivereivak.webbasedapps.repair.resource.ServiceActionStatusTypeResource" target="ee.ttu.olivereivak.webbasedapps.repair.resource.api">
-      <point x="-84.75" y="-39.5" />
-      <point x="2697.75" y="1317.0" />
-      <point x="1324.75" y="1317.0" />
-      <point x="51.30000000000007" y="15.5" />
+      <point x="84.75" y="-39.5" />
+      <point x="595.25" y="1861.0" />
+      <point x="1741.1499999999999" y="1861.0" />
+      <point x="-39.90000000000009" y="15.5" />
+    </edge>
+    <edge source="ee.ttu.olivereivak.webbasedapps.repair.dao.AuthenticationDAOTest" target="ee.ttu.olivereivak.webbasedapps.repair.test.DAOTestBase">
+      <point x="0.0" y="-27.5" />
+      <point x="0.0" y="39.5" />
     </edge>
     <edge source="ee.ttu.olivereivak.webbasedapps.repair.dao.repairshop.ServiceRequestDAO" target="ee.ttu.olivereivak.webbasedapps.repair.dao.BaseDAO">
-      <point x="0.0" y="-39.5" />
-      <point x="2644.5" y="2218.0" />
-      <point x="1891.8333333333333" y="2218.0" />
-      <point x="52.08333333333326" y="63.5" />
+      <point x="-1.1368683772161603E-13" y="-39.5" />
+      <point x="983.5" y="2576.0" />
+      <point x="1743.25" y="2576.0" />
+      <point x="-45.0" y="39.5" />
     </edge>
   </edges>
-  <settings layout="Hierarchic Group" zoom="1.0" x="1327.5" y="3278.0" />
-  <SelectedNodes>
-    <node>ee.ttu.olivereivak.webbasedapps.repair.services.DeviceService</node>
-  </SelectedNodes>
+  <settings layout="Hierarchic Group" zoom="0.40000000000000013" x="1421.249999999999" y="3166.4999999999995" />
+  <SelectedNodes />
   <Categories>
     <Category>Methods</Category>
   </Categories>
   <SCOPE>All</SCOPE>
-  <VISIBILITY>private</VISIBILITY>
+  <VISIBILITY>public</VISIBILITY>
 </Diagram>
 
